@@ -58,6 +58,7 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     cursor: pointer;
+    color: #FFFFFF;
 }
 
 .info{
