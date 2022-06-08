@@ -7,4 +7,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     Author     : Ostional
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Roboto+Condensed:wght@300&display=swap');
 
+*{
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Roboto Condensed', sans-serif;
+}

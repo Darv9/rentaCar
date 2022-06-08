@@ -10,17 +10,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Roboto+Condensed:wght@300&display=swap');
 
 *{
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Roboto Condensed', sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Inconsolata', monospace;
 }
 
 body{
-    background: linear-gradient(180deg, #416BBF, #A6A492);
+    background: linear-gradient(180deg, #FFFFFF, #A6A492);
 }
 
 .container{
-    height:160vh;
+    height:180vh;
     width:100%;
     background-size:cover;
     box-sizing: border-box;
@@ -33,7 +34,7 @@ body{
     margin:auto;
     display:flex;
     align-items: center;
-    background-color: #416BBF;
+    background-color: #0A0C26;
     border: 3px solid #0A0C26;
 }
 
@@ -52,11 +53,11 @@ nav ul li{
     list-style: none;
     margin: 0px 20px;
     font-weight: bold;
+    color: #FFFFFF;
 }
 
 nav ul li a{
     text-decoration: none;
-    color: black;
     cursor: pointer;
 }
 
