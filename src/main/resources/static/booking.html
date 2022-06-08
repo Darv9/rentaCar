@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>RentAcar - Booking</title>
+        <link rel="stylesheet" href="css/booking.css">
+       
+
+    </head>
+    
+    
+    <body>
+                <div class='container'>
+           <div class = 'navbar'> 
+                <img src="images/logo.png" class ='logo' alt="Este es el logo del rentacar"/>
+                <nav>
+                    <ul> <!-- las siguientes lineas son para poner los botones de opciones al final de la pag -->
+                        <li><a href="homeCatalogo.html">Home</a>   </li>
+                        <li><a href="index.html">Index</a>   </li>
+                       
+                       
+                        <li><a href="sparkIndex.html">SparkIndex</a>   </li>
+                        <li><a href="booking.html">Booking</a>   </li>
+                        <li><a href="servicios.html">Servicios</a>   </li>
+                         <li><a href="PerfilUsuario.html">Perfil</a>   </li>
+                         <li><a href="loginProyecto.html">Login</a>   </li>
+                    </ul>
+                </nav>
+             </div> 
+            
+            <!-- Este DIV es nuestro CONTENIDO -->
+            <!-- BR = break = es crear un salto de linea -->
+            <div class='content'>
+                <h1>This is my first webpage <br> I'm so happy</h1>
+                <p>Here you will find the best products EVER !!!</p>
+                <img src="images/portada.jpg" class='miImagen' alt="This is my image"/>
+            </div>
+        
+        </div>
+        
+        <section class="form-register">
+            <h4>Booking - Información Personal</h4>
+            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
+            <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese sus Apellidos">
+            <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
+            <input class="controls" type="email confirmation" name="correo" id="correo" placeholder="Confirme su Correo">
+            <input class="controls" type="number" name="telefono" id="telefono" placeholder="Ingrese su Telefono">
+            
+            <div class="controls">
+                <div class="controls">
+                  <label for="checkin" class="field-label">Check-in Date</label>
+                  <label for="checkin" class="field prepend-icon">
+                    <input type="date" id="checkin" name="checkin" class="gui-input" required="" placeholder="mm/dd/yyyy">
+                    <span class="field-icon"><i class="fa fa-calendar"></i></span>  
+                  </label>
+                </div>
+
+                <div class="controls">
+                  <label for="checkout" class="field-label">Check-out Date</label>
+                  <label for="checkout" class="field prepend-icon">
+                    <input type="date" id="checkout" name="checkout" class="gui-input" required="" placeholder="mm/dd/yyyy">
+                    <span class="field-icon"><i class="fa fa-calendar"></i></span>  
+                  </label>
+                </div>
+              </div>
+            
+            
+            
+            
+           
+        </section>
+        
+        <section class="form-register2">
+            <h4>Booking - Información de Pago</h4>
+            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
+            <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese sus Apellidos">
+            <input class="controls" type="number" name="# Tarjeta" id="tarjeta" placeholder="Numero de tarjeta">  
+            <input class="controls" type="number" name="codigo" id="codigo" placeholder="Codigo de Seguridad - CVV">
+                <label>Expiration Date</label>
+                <select>
+                    <option value="01">Enero</option>
+                    <option value="02">Febrero </option>
+                    <option value="03">Marzo</option>
+                    <option value="04">Abril</option>
+                    <option value="05">Mayo</option>
+                    <option value="06">Junio</option>
+                    <option value="07">Julio</option>
+                    <option value="08">Agosto</option>
+                    <option value="09">Septiembre</option>
+                    <option value="10">Octubre</option>
+                    <option value="11">Noviembre</option>
+                    <option value="12">Deciembre</option>
+                </select>
+                <select>
+                    <option value="16"> 2022</option>
+                    <option value="17"> 2023</option>
+                    <option value="18"> 2024</option>
+                    <option value="19"> 2025</option>
+                    <option value="20"> 2026</option>
+                    <option value="21"> 2027</option>
+                    <option value="22"> 2028</option>
+                </select>
+            </div>
+                  
+            
+            <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</p>
+            
+       
+        
+         <div class="cards" id="credit_cards">
+                <img src="images/pagos.png" id="visa">
+
+         </div>
+                <div class="boton" id="confirmar">
+                      <button type="submit" class="boton" id="confirmar">CONFIRMAR BOOKING</button>
+                </div>
+        
+        
+             </section>
+            
+            
+            
+            
+          
+        
+        <footer>
+            
+            
+        </footer>
+        
+        
+        
+    </body>
+</html>
