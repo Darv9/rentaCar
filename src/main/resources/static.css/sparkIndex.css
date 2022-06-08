@@ -1,0 +1,104 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 5 jun. 2022, 19:25:26
+    Author     : danie
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Roboto+Condensed:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inconsolata', monospace;
+}
+
+body{
+    background: linear-gradient(180deg, #416BBF, #A6A492);
+}
+
+.container{
+    height:160vh;
+    width:100%;
+    background-size:cover;
+    box-sizing: border-box;
+    position:relative;
+}
+
+.navbar{
+    height:17vh;
+    width:100%;
+    margin:auto;
+    display:flex;
+    align-items: center;
+    background-color: #416BBF;
+    border: 3px solid #0A0C26;
+}
+
+.logo{
+    width: 160px;
+    cursor: pointer;
+}
+
+nav{
+    flex:1;
+    padding-left: 60px;
+}
+
+nav ul li{
+    display:inline-block;
+    list-style: none;
+    margin: 0px 20px;
+    font-weight: bold;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.info{
+    text-align: center;
+    position: relative;
+}
+
+.info h1{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 25px;
+    font-weight: bold;
+    color: darkred;
+}
+
+.info p{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 35px;
+    font-weight: bold;
+    color: black;
+}
+
+.info iframe{
+    margin-top: 50px;
+}
+
+.reserva{
+    text-align: center;
+    color: #0A0C26;
+    font-weight: bold;
+    font-size: 35px;
+    position: absolute;
+    margin: 95px 170px;
+}
+
+.reserva h1{
+    color: darkred;
+    box-sizing: border-box;
+    margin-bottom: 95px;
+    border: 3px solid #0A0C26;
+    border-radius: 10px;
+    cursor: pointer;
+}
