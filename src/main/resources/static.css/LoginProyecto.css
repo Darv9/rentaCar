@@ -1,0 +1,97 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jun 3, 2022, 4:51:25 PM
+    Author     : Diego Segura Vega
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial,Helvetica, sans-serif;
+    background: linear-gradient(27deg,#0B1D4D 50%, #0E2F59 50%);
+    
+    
+}
+
+.form{
+    width: 400px;
+    min-width: 300px;
+    border-radius: 10px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin: 10px;
+    
+}
+
+.form img{
+   width: 150px;
+   display: block;
+   margin: 20px 0;
+    
+}
+
+.text{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 25px;
+    
+}
+
+.form input{
+    display: block;
+    margin: auto;
+    height: 40px;
+    width: 75px;
+    padding-left: 10px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    font-family: Verdana, Geneva,Tahoma,san-serif;
+    background-color: transparent;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    
+}
+
+.form input[type="password"]{
+    margin-top: 20px;
+    
+}
+
+::placeholder {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, .596);
+    
+}
+
+.form input:hover{
+    transition:  .5s;
+    border: 1px solid #2980b9;
+    color: #2498db;
+    
+}
+
+.form button{
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    height: 40px;
+    
+}
+
