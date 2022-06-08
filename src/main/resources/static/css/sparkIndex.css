@@ -35,7 +35,6 @@ body{
     display:flex;
     align-items: center;
     background-color: #0A0C26;
-    border: 3px solid #0A0C26;
 }
 
 .logo{
