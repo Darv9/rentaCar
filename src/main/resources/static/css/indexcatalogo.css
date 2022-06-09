@@ -2,18 +2,12 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
 */
-
 /* 
-    Created on : Jun 5, 2022, 1:33:54 PM
-    Author     : Ostional
+    Created on : 4 jun. 2022, 10:10:57
+    Author     : danie
 */
-
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Roboto+Condensed:wght@300&display=swap');
 
-*{
-    font-family: 'Inconsolata', monospace;
-    font-family: 'Roboto Condensed', sans-serif;
-}
 *{
     font-family: 'Inconsolata', monospace;
     font-family: 'Roboto Condensed', sans-serif;
@@ -26,7 +20,7 @@ body{
 }
 
 .container{
-    height:180vh;
+    height:160vh;
     width:100%;
     background-size:cover;
     box-sizing: border-box;
@@ -34,7 +28,7 @@ body{
 }
 
 .navbar{
-    height:17vh;
+    height:18vh;
     width:100%;
     margin:auto;
     display:flex;
@@ -66,45 +60,66 @@ nav ul li a{
     color: #FFFFFF;
 }
 
-.info{
+.contenido h1{
     text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top:24px;
+    margin-bottom:15px;
+    color:#0A0C26;
+}
+.car{
     position: relative;
+    padding-left: 60px;
 }
 
-.info h1{
-    text-align: center;
-    font-size: 30px;
-    margin-top: 25px;
-    font-weight: bold;
-    color: darkred;
-}
-
-.info p{
-    text-align: center;
-    font-size: 30px;
-    margin-top: 35px;
-    font-weight: bold;
-    color: black;
-}
-
-.info iframe{
-    margin-top: 50px;
-}
-
-.reserva{
-    text-align: center;
-    color: #0A0C26;
-    font-weight: bold;
-    font-size: 35px;
-    position: absolute;
-    margin: 95px 170px;
-}
-
-.reserva h1{
-    color: darkred;
-    box-sizing: border-box;
-    margin-bottom: 95px;
+.car ul li{
+    display:inline-block;
+    list-style: none;
+    margin: 30px 180px;
     border: 3px solid #0A0C26;
-    border-radius: 10px;
+    border-radius: 15px;
+    cursor:pointer;
+}
+
+.car ul li a{
+    position: relative;
+    font-weight: bold;
+    text-decoration: none;
+    color:black;
+}
+
+.car h1{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top:5px;
+    margin-bottom:25px;
+    color: #0A0C26;  
+}
+
+.car h2{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top:5px;
+    margin-bottom:5px;
+    color:darkred; 
+}
+
+.car p{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top:15px;
+    margin-bottom:15px;
+    margin-left: 35px;
+}
+
+.carImg{
+    align-content: center;
+    height: 300px;
+    width: 500px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
     cursor: pointer;
 }

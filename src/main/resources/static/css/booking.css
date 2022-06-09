@@ -3,15 +3,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
 */
 /* 
-    Created on : Jun 8, 2022, 10:03:37 AM
-    Author     : Ostional
-*/
-
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
-*/
-/* 
     Created on : Jun 7, 2022, 10:42:36 PM
     Author     : Ostional
 */
@@ -29,7 +20,7 @@ body{
 }
 
 .container{
-    height:180vh;
+    height:160vh;
     width:100%;
     background-size:cover;
     box-sizing: border-box;
@@ -37,7 +28,7 @@ body{
 }
 
 .navbar{
-    height:17vh;
+    height:18vh;
     width:100%;
     margin:auto;
     display:flex;
@@ -69,12 +60,8 @@ nav ul li a{
     color: #FFFFFF;
 }
 
-
-
-
-
-
 .form-register{
+    
     width: 400px;
     background: #416BBF;
     padding: 30px;
@@ -89,7 +76,6 @@ nav ul li a{
     font-size: 22px;
     margin-bottom: 20px;
 }
-
 .controls{
     width: 100%;
     background: #0E2F59;
@@ -100,7 +86,6 @@ nav ul li a{
     font-size: 18px;
     color: white;
 }
-
 .form-register p{
     height: 40px;
     text-align: center;
@@ -146,7 +131,7 @@ nav ul li a{
 }
 
 .controls{
-    width: 100%;
+    width: 95%;
     background: #0E2F59;
     padding: 10px;
     border-radius: 4px;

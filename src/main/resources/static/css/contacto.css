@@ -7,6 +7,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     Author     : Dayanna Rojas
 */
 
+
+
 body{
     background: linear-gradient(180deg, #FFFFFF, #A6A492);
 }
@@ -37,7 +39,7 @@ body{
 }
 
 .logo{
-    width: 110px;
+    width: 160px;
     cursor:pointer;
 }
 
