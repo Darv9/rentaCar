@@ -18,6 +18,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 
 body{
     background: linear-gradient(180deg, #FFFFFF, #A6A492);
+
 }
 
 *{
@@ -33,6 +34,7 @@ body{
     background-size:cover;
     box-sizing: border-box;
     position:relative;
+ 
 }
 
 .navbar{
@@ -70,13 +72,7 @@ navul li a{
     color: #FFFFFF;
 }
 
-.contenedor{
-    position:static;
-    display:  inline-block;
-    text-align:right;
-    height:18%;
-    width:100%;
-}
+
 .texto-encima{
     position: relative;
     top:-800px;
