@@ -8,20 +8,20 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta charset="utf-8">
         <title>RentAcar - Booking</title>
         <link rel="stylesheet" href="css/booking.css">
-       
+
 
     </head>
-    
-    
+
+
     <body>
-                <div class='container'>
-           <div class = 'navbar'> 
+        <div class='container'>
+
+            <div class = 'navbar'> 
                 <img src="images/logo.png" class ='logo' alt="Este es el logo del rentacar"/>
                 <nav>
                     <ul>                         
-                        <li> <a href="home.html">Home</a></li>
-                        <li> <a href="index.html">Flota y Tarifas</a> </li>
-                        <li> <a href="sparkindex.html">Ofertas Especiales</a> </li>
+                        <li> <a href="index.html">Home</a></li>
+                        <li> <a href="catalogo.html">Flota y Tarifas</a> </li>
                         <li> <a href="booking.html">Reserva</a> </li>
                         <li> <a href="servicios.html">Renting</a> </li>
                         <li> <a href="contacto.html">Contacto</a></li>
@@ -29,47 +29,46 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <li> <a href="loginProyecto.html">Login</a> </li>
                     </ul>
                 </nav>
-             </div>         
-        </div>
-        
-        <section class="form-register">
-            <h4>Booking - Información Personal</h4>
-            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-            <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese sus Apellidos">
-            <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-            <input class="controls" type="email confirmation" name="correo" id="correo" placeholder="Confirme su Correo">
-            <input class="controls" type="number" name="telefono" id="telefono" placeholder="Ingrese su Telefono">
-            
-            <div class="controls">
-                <div class="controls">
-                  <label for="checkin" class="field-label">Check-in Date</label>
-                  <label for="checkin" class="field prepend-icon">
-                    <input type="date" id="checkin" name="checkin" class="gui-input" required="" placeholder="mm/dd/yyyy">
-                    <span class="field-icon"><i class="fa fa-calendar"></i></span>  
-                  </label>
-                </div>
+            </div>         
+
+            <section class="form-register">
+                <h4>Booking - Información Personal</h4>
+                <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
+                <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese sus Apellidos">
+                <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
+                <input class="controls" type="email confirmation" name="correo" id="correo" placeholder="Confirme su Correo">
+                <input class="controls" type="number" name="telefono" id="telefono" placeholder="Ingrese su Telefono">
 
                 <div class="controls">
-                  <label for="checkout" class="field-label">Check-out Date</label>
-                  <label for="checkout" class="field prepend-icon">
-                    <input type="date" id="checkout" name="checkout" class="gui-input" required="" placeholder="mm/dd/yyyy">
-                    <span class="field-icon"><i class="fa fa-calendar"></i></span>  
-                  </label>
+                    <div class="controls">
+                        <label for="checkin" class="field-label">Check-in Date</label>
+                        <label for="checkin" class="field prepend-icon">
+                            <input type="date" id="checkin" name="checkin" class="gui-input" required="" placeholder="mm/dd/yyyy">
+                            <span class="field-icon"><i class="fa fa-calendar"></i></span>  
+                        </label>
+                    </div>
+
+                    <div class="controls">
+                        <label for="checkout" class="field-label">Check-out Date</label>
+                        <label for="checkout" class="field prepend-icon">
+                            <input type="date" id="checkout" name="checkout" class="gui-input" required="" placeholder="mm/dd/yyyy">
+                            <span class="field-icon"><i class="fa fa-calendar"></i></span>  
+                        </label>
+                    </div>
                 </div>
-              </div>
-            
-            
-            
-            
-           
-        </section>
-        
-        <section class="form-register2">
-            <h4>Booking - Información de Pago</h4>
-            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-            <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese sus Apellidos">
-            <input class="controls" type="number" name="# Tarjeta" id="tarjeta" placeholder="Numero de tarjeta">  
-            <input class="controls" type="number" name="codigo" id="codigo" placeholder="Codigo de Seguridad - CVV">
+
+
+
+
+
+            </section>
+
+            <section class="form-register2">
+                <h4>Booking - Información de Pago</h4>
+                <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
+                <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese sus Apellidos">
+                <input class="controls" type="number" name="# Tarjeta" id="tarjeta" placeholder="Numero de tarjeta">  
+                <input class="controls" type="number" name="codigo" id="codigo" placeholder="Codigo de Seguridad - CVV">
                 <label>Expiration Date</label>
                 <select>
                     <option value="01">Enero</option>
@@ -94,35 +93,35 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <option value="21"> 2027</option>
                     <option value="22"> 2028</option>
                 </select>
-            </div>
-                  
-            
-            <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</p>
-            
-       
-        
-         <div class="cards" id="credit_cards">
-                <img src="images/pagos.png" id="visa">
 
-         </div>
-                <div class="boton" id="confirmar">
-                      <button type="submit" class="boton" id="confirmar">CONFIRMAR BOOKING</button>
+
+
+
+                <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</p>
+
+
+
+                <div class="cards" id="credit_cards">
+                    <img src="images/pagos.png" id="visa">
+
                 </div>
-        
-        
-             </section>
-            
-            
-            
-            
-          
-        
+                <div class="boton" id="confirmar">
+                    <button type="submit" class="boton" id="confirmar">CONFIRMAR BOOKING</button>
+                </div>
+
+
+            </section>
+
+        </div>
+
+
+
         <footer>
-            
-            
+
+
         </footer>
-        
-        
-        
+
+
+
     </body>
 </html>

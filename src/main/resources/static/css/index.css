@@ -65,7 +65,7 @@ nav ul li{
     color: #FFFFFF;
 }
 
-navul li a{
+nav ul li a{
 
     text-decoration: none;
     cursor: pointer;
@@ -73,24 +73,26 @@ navul li a{
 }
 
 
-.texto-encima{
-    position: relative;
-    top:-800px;
-    text-align:left;
-    left: 57px;
-    color: #FFFFFF;
-    font-size: 40px;
-    font-weight: bold;
-}
-.centrado{
-    position: absolute;
-    top:20%;
-    left:25%;
-    transform: translate(-50%, -50%);
-    color: #FFFFFF;
-    font-size: 40px;
-    text-align:left;
-}
+.contenedor{
+    height:150vh;
+    width:100%;
+    background-image: url(../images/4.png);
+    background-size:cover;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+    position:relative;
+  }
+
+  .contenedor h1{
+        color: #FFFFFF;
+        margin: auto;
+        text-align: center;
+        font-size: 60px;
+        font-weight: bold;
+       text-orientation: upright;
+  }
+
 
 .navbar2{
     height:18vh;
@@ -103,25 +105,15 @@ navul li a{
     left: 30px;
 }
 .Imagen1{
-    height: 3%;
-    position:absolute;
-    bottom:-28px;
-    right: 88px;
-    cursor: pointer;
+ 
+    margin:  auto;
+
 }
 .Imagen2{
-    height: 3%;
-    position:absolute;
-    bottom:-28px;
-    right: 55px;
-    cursor: pointer;
+   margin: auto;
 }
 .Imagen3{
-    height: 3%;
-    position:absolute;
-    bottom:-28px;
-    right: 22px;
-    cursor: pointer;
+   margin: auto;
 }
 
 

@@ -91,7 +91,7 @@ nav ul li a{
     color: #0A0C26;
     font-weight: bold;
     font-size: 35px;
-    position: absolute;
+    position: relative;
     margin: 95px 170px;
 }
 
