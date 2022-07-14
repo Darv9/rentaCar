@@ -29,7 +29,7 @@ public class ClienteService implements IClienteService{
     }
 
     @Override
-    public void delete(long id) {
+    public void deleteCliente(long id) {
         clienteRepository.deleteById(id);
     }
 }

@@ -19,7 +19,7 @@ public class ClienteController {
     private IClienteService clienteService;
 
     @GetMapping("/clientes")
-    public String index(Model model) {
+    public String indexCliente(Model model) {
         List<Cliente> listaCliente = clienteService.getAllCliente();
         model.addAttribute("titulo", "Tabla Clientes");
         model.addAttribute("clientes", listaCliente);
@@ -32,7 +32,7 @@ public class ClienteController {
         return "crear";
     }
 
-    @PostMapping("/save")
+    @PostMapping("/saveCliente")
     public String guardarCliente(@ModelAttribute Cliente cliente) {
         clienteService.saveCliente(cliente);
         return "redirect:/clientes";
@@ -45,9 +45,9 @@ public class ClienteController {
         return "crear";
     }
     
-    @GetMapping("/delete/{id}")
-    public String eliminarCliente(@PathVariable("id") Long id) {
-        clienteService.delete(id);
+    @GetMapping("/deleteCliente/{id}")
+    public String deleteCliente(@PathVariable("id") Long id) {
+        clienteService.deleteCliente(id);
         return "redirect:/clientes";
     }
 }

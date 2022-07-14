@@ -9,7 +9,7 @@ import java.util.List;
  */
 public interface IDetalleRentaService {
     public List<DetalleRenta> getAllDetalleRenta();
-    public DetalleRenta getDetalleRentaById(long id);
+    public DetalleRenta getDetalleRentaById(long idrenta);
     public void saveDetalleRenta(DetalleRenta detalleRenta);
-    public void delete(long id);
+    public void delete(long idrenta);
 }

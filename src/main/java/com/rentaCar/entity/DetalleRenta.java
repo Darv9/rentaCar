@@ -18,101 +18,82 @@ public class DetalleRenta implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    private long idDetalleRenta;
-    private long idRenta;
-    private long idVehiculo;
-    private int cantVehiculos;
-    private int diasRenta;
+    private long idrenta;
+    private long idvehiculo;
+    private int cantvehiculos;
+    private int diasrenta;
     @Temporal(javax.persistence.TemporalType.DATE)
-    private Date fechaRentaDev;
-    private long idTipoSeguro;
-    private int precioVehiculoUnit;
-    private int precioRenta ;
+    private Date fecharenta;
+    private long idseguro;
+    private int preciovehiculo;
+    private int preciorenta ;
+
+    public long getIdrenta() {
+        return idrenta;
+    }
+
+    public void setIdrenta(long idrenta) {
+        this.idrenta = idrenta;
+    }
+
+    public long getIdvehiculo() {
+        return idvehiculo;
+    }
+
+    public void setIdvehiculo(long idvehiculo) {
+        this.idvehiculo = idvehiculo;
+    }
+
+    public int getCantvehiculos() {
+        return cantvehiculos;
+    }
+
+    public void setCantvehiculos(int cantvehiculos) {
+        this.cantvehiculos = cantvehiculos;
+    }
+
+    public int getDiasrenta() {
+        return diasrenta;
+    }
+
+    public void setDiasrenta(int diasrenta) {
+        this.diasrenta = diasrenta;
+    }
+
+    public Date getFecharenta() {
+        return fecharenta;
+    }
+
+    public void setFecharenta(Date fecharenta) {
+        this.fecharenta = fecharenta;
+    }
+
+    public long getIdseguro() {
+        return idseguro;
+    }
+
+    public void setIdseguro(long idseguro) {
+        this.idseguro = idseguro;
+    }
+
+    public int getPreciovehiculo() {
+        return preciovehiculo;
+    }
+
+    public void setPreciovehiculo(int preciovehiculo) {
+        this.preciovehiculo = preciovehiculo;
+    }
+
+    public int getPreciorenta() {
+        return preciorenta;
+    }
+
+    public void setPreciorenta(int preciorenta) {
+        this.preciorenta = preciorenta;
+    }
     
-  
-   
- 
 
-    public long getId() {
-        return id;
-    }
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public long getIdDetalleRenta() {
-        return idDetalleRenta;
-    }
-
-    public void setIdDetalleRenta(long idDetalleRenta) {
-        this.idDetalleRenta = idDetalleRenta;
-    }
-
-    public long getIdRenta() {
-        return idRenta;
-    }
-
-    public void setIdRenta(long idRenta) {
-        this.idRenta = idRenta;
-    }
-
-    public long getIdVehiculo() {
-        return idVehiculo;
-    }
-
-    public void setIdVehiculo(long idVehiculo) {
-        this.idVehiculo = idVehiculo;
-    }
-
-    public int getCantVehiculos() {
-        return cantVehiculos;
-    }
-
-    public void setCantVehiculos(int cantVehiculos) {
-        this.cantVehiculos = cantVehiculos;
-    }
-
-    public int getDiasRenta() {
-        return diasRenta;
-    }
-
-    public void setDiasRenta(int diasRenta) {
-        this.diasRenta = diasRenta;
-    }
-
-    public Date getFechaRentaDev() {
-        return fechaRentaDev;
-    }
-
-    public void setFechaRentaDev(Date fechaRentaDev) {
-        this.fechaRentaDev = fechaRentaDev;
-    }
-
-    public long getIdTipoSeguro() {
-        return idTipoSeguro;
-    }
-
-    public void setIdTipoSeguro(long idTipoSeguro) {
-        this.idTipoSeguro = idTipoSeguro;
-    }
-
-    public int getPrecioVehiculoUnit() {
-        return precioVehiculoUnit;
-    }
-
-    public void setPrecioVehiculoUnit(int precioVehiculoUnit) {
-        this.precioVehiculoUnit = precioVehiculoUnit;
-    }
-
-    public int getPrecioRenta() {
-        return precioRenta;
-    }
-
-    public void setPrecioRenta(int precioRenta) {
-        this.precioRenta = precioRenta;
-    }
 
   
     

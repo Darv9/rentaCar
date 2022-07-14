@@ -35,20 +35,20 @@ public class DetalleRentaController {
         return "crearDetalleRenta";
     }
 
-    @GetMapping("/editdetalleRenta/{id}")
-    public String editarDetalleRenta(@PathVariable("id") Long idDetalleRenta, Model model) {
-        DetalleRenta detalleRenta = detalleRentaService.getDetalleRentaById(idDetalleRenta);
+    @GetMapping("/editdetalleRenta/{idrenta}")
+    public String editarDetalleRenta(@PathVariable("idrenta") Long idrenta, Model model) {
+        DetalleRenta detalleRenta = detalleRentaService.getDetalleRentaById(idrenta);
         model.addAttribute("detalleRenta", detalleRenta);
         return "crearDetalleRenta";
     }
 
-    @GetMapping("/delete/{id}")
-    public String delete(@PathVariable("id") Long idDetalleRenta) {
-        detalleRentaService.delete(idDetalleRenta);
+    @GetMapping("/delete/{idrenta}")
+    public String delete(@PathVariable("idrenta") Long idrenta) {
+        detalleRentaService.delete(idrenta);
         return "redirect:/detalleRenta";
     }
 
-    @PostMapping("/save")
+    @PostMapping("/saveDetalleRenta")
     public String guardarDetalleRenta(@ModelAttribute DetalleRenta detalleRenta) {
         detalleRentaService.saveDetalleRenta(detalleRenta);
         return "redirect:/detalleRenta";

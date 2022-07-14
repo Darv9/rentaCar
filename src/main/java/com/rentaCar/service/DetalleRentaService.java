@@ -22,8 +22,8 @@ import org.springframework.stereotype.Service;
     }
 
     @Override
-    public DetalleRenta getDetalleRentaById(long id) {
-         return detalleRentaRepository.findById(id).orElse(null);
+    public DetalleRenta getDetalleRentaById(long idrenta) {
+         return detalleRentaRepository.findById(idrenta).orElse(null);
     }
 
     @Override
@@ -32,8 +32,8 @@ import org.springframework.stereotype.Service;
     }
 
     @Override
-    public void delete(long id) {
-         detalleRentaRepository.deleteById(id);
+    public void delete(long idrenta) {
+         detalleRentaRepository.deleteById(idrenta);
     }
     
 

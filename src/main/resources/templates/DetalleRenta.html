@@ -4,19 +4,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
 <html xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <title>DetalleRenta</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    </head>
+    
+    <head th:replace="plantilla/template::head"></head>
+    
     <body>
+        <header th:replace="plantilla/template::header"></header>
+        
         <h1 th:text = "${titulo}"> </h1>
         <table class="table table-dark table-sm">
             <thead class = "thead-dark">
                 <tr>
-                    <th scope="col">Id </th>
                     <th scope="col">Id Detalle Renta </th>
-                    <th scope="col">Id Renta </th>
                     <th scope="col">Id Vehiculo</th>
                     <th scope="col">Cantidad de Vehiculos </th>
                     <th scope="col">Dias de Renta </th>
@@ -31,27 +29,24 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <tbody>   
             <th:block th:each="user : ${detalleRenta}">
                 <tr>
-                    <td th:text="${user.getId}"></td>
-                    <td th:text="${user.getIdDetalleRenta}"></td>
-                    <td th:text="${user.getIdRenta}"></td>
-                    <td th:text="${user.getIdVehiculo}"></td>
-                    <td th:text="${user.getCantVehiculos}"></td>
-                    <td th:Date="${user.getDiasRenta}"></td>
-                    <td th:Date="${user.getFechaRentaDev}"></td>
-                    <td th:Date="${user.getIdTipoSeguro}"></td>
-                    
-                    <td th:text="${user.getPrecioRenta}"></td>
+                    <td th:text="${user.getIdrenta}"></td>
+                    <td th:text="${user.getIdvehiculo}"></td>
+                    <td th:text="${user.getCantvehiculos}"></td>
+                    <td th:Date="${user.getDiasrenta}"></td>
+                    <td th:Date="${user.getFecharenta}"></td>
+                    <td th:Date="${user.getIdseguro}"></td>
+                    <td th:text="${user.getPreciovehiculo}"></td>
+                    <td th:text="${user.getPreciorenta}"></td>
                     <td>
-                        <a th:href="@{/editdetalleRenta/{id}(id=${user.getId})}">Edit</a>
+                        <a th:href="@{/editdetalleRenta/{idrenta}(idrenta=${user.getIdrenta})}">Edit</a>
                     </td>
                     <td>
-                        <a th:href="@{/delete/{id}(id=${user.getId})}">Delete</a>
+                        <a th:href="@{/delete/{idrenta}(idrenta=${user.getIdrenta})}">Delete</a>
                     </td>
                 </tr>
             </th:block>
         </tbody>
     </table>
-        <a href ="/detalleRentaN" > Agregar </a>
         
     </body>
 </html>
