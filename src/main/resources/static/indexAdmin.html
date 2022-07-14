@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="plantilla/template::head"></head>
+    <body>
+        <header th:replace="plantilla/template::header"></header>
+        <div class="list-group">
+            <a href="/clientes" class="list-group-item list-group-item-action active" aria-current="true">
+                Base de Datos Clientes
+            </a>
+            <a href="/detalleRenta" class="list-group-item list-group-item-action active" aria-current="true">
+                Base de Datos Detalle de la Renta
+            </a>
+        </div>
+        <footer th:replace="plantilla/template::footer"></footer>
+    </body>
+</html>
