@@ -4,17 +4,79 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
 <html xmlns:th="http://www.thymeleaf.org">
-    <head th:replace="plantilla/template::head"></head>
-    <body>
-        <header th:replace="plantilla/template::header"></header>
+    <head th:fragment="head">
+        <title>Rent A Car</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </head>
+    <body class="body" style="background: linear-gradient(180deg, #FFFFFF, #A6A492); height: 100vh;">
+        <header th:fragment="header">
+            <nav class="navbar" style="height: 150px; background-color: #0A0C26;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="/images/logo.png" alt="" width="75" height="75" class="d-inline-block align-text-top">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color:#FFFFFF;">
+                        <span class="navbar-toggler-icon" style="color: #FFFFFF;"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background: linear-gradient(180deg, #FFFFFF, #A6A492);">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="catalogo.html">Catalogo</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Bases de Datos
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="/clientes">Clientes</a></li>
+                                    <li><a class="dropdown-item" href="">Empleados</a></li>
+                                    <li><a class="dropdown-item" href="/detalleRenta">Detalle Renta</a></li>
+                                    <li><a class="dropdown-item" href="#">Reclamo</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled">Log out</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
         <div class="list-group">
             <a href="/clientes" class="list-group-item list-group-item-action active" aria-current="true">
                 Base de Datos Clientes
             </a>
-            <a href="/detalleRenta" class="list-group-item list-group-item-action active" aria-current="true">
-                Base de Datos Detalle de la Renta
-            </a>
+            <a href="/detalleRenta" class="list-group-item list-group-item-action">Base de Datos detalle renta</a>
         </div>
-        <footer th:replace="plantilla/template::footer"></footer>
+        <footer th:fragment="footer" class="fixed-bottom";>
+            <div class="card mb-3" style="background: linear-gradient(180deg, #FFFFFF, #A6A492);">
+                <div class="card-body">
+                    <h5 class="card-title">Rent The Car</h5>
+                    <p class="card-text">Empresa de renta de carros, derechos de admision reservados</p>
+                    <p class="card-text"><small class="text-muted">Copyright Rent The Car &copy; 2022 </small></p>
+                </div>
+                <div class="card mb-3" style="background: linear-gradient(180deg, #FFFFFF, #A6A492);">
+                    <ul class="list-group list-group-horizontal">
+                        <li class="list-group-item"><a href="catalogo.html">Catalogo</a></li>
+                        <li class="list-group-item"><a href="LoginProyecto.html">Inicio Sesion</a></li>
+                        <li class="list-group-item"><a href="contacto.html">Contacto</a></li>
+                        <li class="list-group-item"><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                                                       th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}">ES</a></li>
+                        <li class="list-group-item"><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                                                       th:href="${urlBuilder.replaceQueryParam('lang','en').toUriString()}">EN</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
