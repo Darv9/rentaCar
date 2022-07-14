@@ -1,11 +1,4 @@
 
-
-
-<!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>ReclamoRenta</title>
@@ -34,8 +27,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <td th:text="${user.getIdVehiculo}"></td>
                     <td th:Date="${user.getFechaReclamo}"></td>
                     <td th:Date="${user.getDescripcionReclamo}"></td>
-                    
-               
+
+
                     <td>
                         <a th:href="@{/editreclamo/{id}(id=${user.getIdReclamo})}">Edit</a>
                     </td>
@@ -46,7 +39,5 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             </th:block>
         </tbody>
     </table>
-        <a href ="/reclamoRentaN" > Agregar </a>
-        
-    </body>
+</body>
 </html>

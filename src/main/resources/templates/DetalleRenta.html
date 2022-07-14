@@ -7,19 +7,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
     <head th:replace="plantilla/template::head"></head>
 
-    <body>
+    <body class="body" style="background: linear-gradient(180deg, #FFFFFF, #A6A492); height: 100vh;">
         <header th:replace="plantilla/template::header"></header>
 
         <h1 th:text = "${titulo}"> </h1>
-        <table class="table table-dark table-sm">
+        <table class = "table table-secondary table-striped table-captiontop">
             <thead class = "thead-dark">
                 <tr>
                     <th scope="col">Id Detalle Renta </th>
                     <th scope="col">Id Vehiculo</th>
                     <th scope="col">Cantidad de Vehiculos </th>
-                    <th scope="col">Dias de Renta </th>
-                    <th scope="col">Fecha Renta Dev</th>
-                    <th scope="col">Id Tipo Seguro</th>
                     <th scope="col">Precio Vehiculo Unitario</th>
                     <th scope="col">Precio Renta </th>
                     <th scope="col">Editar </th>
@@ -32,9 +29,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <td th:text="${user.getIdrenta}"></td>
                     <td th:text="${user.getIdvehiculo}"></td>
                     <td th:text="${user.getCantvehiculos}"></td>
-                    <td th:Date="${user.getDiasrenta}"></td>
-                    <td th:Date="${user.getFecharenta}"></td>
-                    <td th:Date="${user.getIdseguro}"></td>
                     <td th:text="${user.getPreciovehiculo}"></td>
                     <td th:text="${user.getPreciorenta}"></td>
                     <td>
@@ -47,8 +41,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             </th:block>
         </tbody>
     </table>
-    <button type="button" class="btn btn-primary btn-lg"><a href="/detalleRentaN"></a>Agregar Detalle Renta</button>
-    
+    <a class="btn btn-primary" href="/detalleRentaN" role="button">Detalle Renta</a>
     <footer th:replace="plantilla/template::footer"></footer>
 </body>
 </html>
