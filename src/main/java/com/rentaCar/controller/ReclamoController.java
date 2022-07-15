@@ -45,9 +45,9 @@ public class ReclamoController {
         return "crearReclamo";
     }
 
-    @GetMapping("/delete/{idreclamo}")
+    @GetMapping("/deletereclamo/{idreclamo}")
     public String delete(@PathVariable("idreclamo") Long idreclamo) {
-        reclamoService.delete(idreclamo);
+        reclamoService.deletereclamo(idreclamo);
         return "redirect:/reclamo";
     }
 

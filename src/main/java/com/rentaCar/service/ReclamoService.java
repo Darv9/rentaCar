@@ -37,7 +37,7 @@ public class ReclamoService implements IReclamoService{
     }
 
     @Override
-    public void delete(long idreclamo) {
+    public void deletereclamo(long idreclamo) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
