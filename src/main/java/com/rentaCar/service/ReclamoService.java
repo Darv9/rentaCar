@@ -23,8 +23,8 @@ public class ReclamoService implements IReclamoService{
     }
 
     @Override
-    public Reclamo getReclamoById(long id) {
-        return reclamoRepository.findById(id).orElse(null);
+    public Reclamo getReclamoById(long idreclamo) {
+        return reclamoRepository.findById(idreclamo).orElse(null);
     }
 
     @Override
@@ -32,13 +32,9 @@ public class ReclamoService implements IReclamoService{
         reclamoRepository.save(reclamo);
     }
 
-    public void deleteReclamo(long id) {
-        reclamoRepository.deleteById(id);
-    }
-
     @Override
     public void deletereclamo(long idreclamo) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        reclamoRepository.deleteById(idreclamo);
     }
 
     

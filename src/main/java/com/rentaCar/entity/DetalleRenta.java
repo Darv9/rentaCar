@@ -1,13 +1,13 @@
 package com.rentaCar.entity;
 
 import java.io.Serializable;
-import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
 /**
  *
  * @author Dayanna Rojas
@@ -22,11 +22,12 @@ public class DetalleRenta implements Serializable {
     private long idvehiculo;
     private int cantvehiculos;
     private int diasrenta;
-    @Temporal(javax.persistence.TemporalType.DATE)
-    private Date fecharenta;
-    private long idseguro;
     private int preciovehiculo;
     private int preciorenta ;
+    
+    @ManyToOne
+    @JoinColumn(name="provincia_id")
+    private Provincia provincia;
 
     public long getIdrenta() {
         return idrenta;
@@ -60,20 +61,12 @@ public class DetalleRenta implements Serializable {
         this.diasrenta = diasrenta;
     }
 
-    public Date getFecharenta() {
-        return fecharenta;
+    public Provincia getProvincia() {
+        return provincia;
     }
 
-    public void setFecharenta(Date fecharenta) {
-        this.fecharenta = fecharenta;
-    }
-
-    public long getIdseguro() {
-        return idseguro;
-    }
-
-    public void setIdseguro(long idseguro) {
-        this.idseguro = idseguro;
+    public void setProvincia(Provincia provincia) {
+        this.provincia = provincia;
     }
 
     public int getPreciovehiculo() {

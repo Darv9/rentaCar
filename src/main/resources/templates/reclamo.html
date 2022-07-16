@@ -10,7 +10,6 @@
                     <th scope="col">Id Reclamo </th>
                     <th scope="col">Id Cliente </th>
                     <th scope="col">Id Vehiculo</th>
-                    <th scope="col">Editar </th>
                     <th scope="col">Eliminar </th> 
                 </tr>
             </thead> 
@@ -20,9 +19,6 @@
                     <td th:text="${user.getIdreclamo}"></td>
                     <td th:text="${user.getIdcliente}"></td>
                     <td th:text="${user.getIdvehiculo}"></td>
-                    <td>
-                        <a th:href="@{/editreclamo/{idreclamo}(idreclamo=${user.getIdreclamo})}">Edit</a>
-                    </td>
                     <td>
                         <a th:href="@{/deletereclamo/{idreclamo}(idreclamo=${user.getIdreclamo})}">Delete</a>
                     </td>

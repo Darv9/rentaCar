@@ -4,21 +4,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
 <html xmlns:th="http://www.thymeleaf.org">
-    
+
     <head th:replace="plantilla/template::head"></head>
- 
+
     <body class="body" style="background: linear-gradient(180deg, #FFFFFF, #A6A492); height: 100vh";>
         <form th:object = "${detalleRenta}"
-              th:action = "@{/save}"
+              th:action = "@{/saveDetalleRenta}"
               method='POST'
               >
             <input type="hidden" th:field="*{idrenta}">
-            <div class="row mb-3">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Id Detalle Renta</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" th:field="*{idrenta}">
-                </div>
-            </div>
             <div class="row mb-3">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Id Vehiculo</label>
                 <div class="col-sm-10">
@@ -38,32 +32,30 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 </div>
             </div>
             <div class="row mb-3">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Fecha Renta Dev</label>
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Precio Vehiculo</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputPassword3" th:field="*{fecharenta}">
+                    <input type="text" class="form-control" id="inputPassword3" th:field="*{preciovehiculo}">
                 </div>
             </div>
             <div class="row mb-3">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Id Tipo Seguro</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputPassword3" th:field="*{idseguro}">
-                </div>
-            </div>
-              <div class="row mb-3">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Precio Vehiculo Unitario</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputPassword3" th:field="*{fecharenta}">
-                </div>
-            </div>
-              <div class="row mb-3">
                 <label for="inputPassword3" class="col-sm-2 col-form-label">Precio Renta</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="inputPassword3" th:field="*{preciorenta}">
                 </div>
             </div>
+
+            <div class="form-group mb-3 row">
+                <label for="inputState" class="form-label">Tienda</label>
+                <select th:field="*{provincia}" class="form-control form-control-sm col-md-6" id="provincias">
+                    <option th:each="x:${provincias}"
+                            th:value="${x.idprovincias}"
+                            th:text="${x.provincia}"/>
+                </select>
+            </div>
             <button type="submit" class="btn btn-primary" value="Guardar">Submit</button>
         </form>
+
         <footer th:replace="plantilla/template::footer"></footer>
-        
+
     </body>
 </html>
