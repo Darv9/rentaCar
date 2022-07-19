@@ -1,0 +1,48 @@
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="plantilla/template::head"></head>
+    <body>
+        <header th:replace="plantilla/template::header"></header>
+        <h1 th:text = "${titulo}"> </h1>
+        <table class = "table table-secondary table-striped table-captiontop">
+            <thead class = "thead-dark">
+                <tr>
+                    <th scope="col">Id Vehiculo </th>
+                    <th scope="col">Modelo </th>
+                    <th scope="col">Año</th>
+                    <th scope="col">Color </th> 
+                    <th scope="col">Marca </th>
+                    <th scope="col">Descripción Vehiculo </th>
+                    <th scope="col">Material</th>
+                    <th scope="col">Tipo de Motor </th> 
+                    <th scope="col">Kilometraje </th>
+                    <th scope="col">Cant. Puertas </th>
+                    <th scope="col">Cant. Asientos</th>
+                    <th scope="col">Precio de Renta </th> 
+                </tr>
+            </thead> 
+            <tbody>   
+            <th:block th:each="user : ${vehiculo}">
+                <tr>
+                    <td th:text="${user.getIdvehiculo}"></td>
+                    <td th:text="${user.getModelo}"></td>
+                    <td th:text="${user.getAnnio}"></td>
+                    <td th:text="${user.getColor}"></td>
+                    <td th:text="${user.getMarca}"></td>
+                    <td th:text="${user.getDescripcionvehiculo}"></td>
+                    <td th:text="${user.getMaterial}"></td>
+                    <td th:text="${user.getTipomotor}"></td>
+                    <td th:text="${user.getKilometraje}"></td>
+                    <td th:text="${user.getNumpuertas}"></td>
+                    <td th:text="${user.getNumasientos}"></td>
+                    <td th:text="${user.getPreciorenta}"></td>
+                    <td>
+                        <a th:href="@{/deletevehiculo/{idvehiculo}(idvehiculo=${user.getIdvehiculo})}">Delete</a>
+                    </td>
+                </tr>
+            </th:block>
+        </tbody>
+    </table>
+    <footer th:replace="plantilla/template::footer"></footer>
+</body>
+</html>
