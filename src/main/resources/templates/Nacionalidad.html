@@ -1,11 +1,37 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head th:replace="plantilla/template::head"></head>
+
+    <body class="body" style="background: linear-gradient(180deg, #FFFFFF, #A6A492); height: 100vh;">
+        <header th:replace="plantilla/template::header"></header>
+
+        <h1 th:text = "${titulo}"></h1>
+        <h1 th:text = "#{nacionalidad.nombre}"></h1>
+        <table class = "table table-secondary table-striped table-captiontop">
+            <thead class = "thead-dark">
+                <tr>
+                    <th scope="col">Id Nacionalidad </th>
+                    <th scope="col">Nombre Nacionalidad </th>
+                    <th scope="col">Editar </th>
+                    <th scope="col">Eliminar</th>
+                </tr>
+            </thead> 
+            <tbody>   
+            <th:block th:each="user : ${nacionalidad}">
+                <tr>
+                    <td th:text="${user.getIdNacionalidad}"></td>
+                    <td th:text="${user.getNombreNacionalidad}"></td>
+                    <td>
+                        <a th:href="@{/editNacionalidad/{id}(id=${user.getId})}">Edit</a>
+                    </td>
+                </tr>
+            </th:block>
+        </tbody>
+    </table>
+    <a class="btn btn-primary" href="/nacionalidadN" role="button">Agregar Nacionalidad</a>
+    
+    <footer th:replace="plantilla/template::footer"></footer>
+
+</body> 
 </html>
