@@ -35,9 +35,5 @@ import org.springframework.stereotype.Service;
     public void delete(long idrenta) {
          detalleRentaRepository.deleteById(idrenta);
     }
-    
-
-    
-  
- 
+   
 }

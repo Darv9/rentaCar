@@ -4,14 +4,58 @@
  */
 package com.rentaCar.entity;
 
+import java.io.Serializable;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  *
  * @author Diego Segura Vega
  */
-public class DetalleVenta {
+@Entity
+@Table(name = "DetalleVenta")
+public class DetalleVenta implements Serializable  {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int idventa;
+    private int idvehiculo;
+    private int cantvehiculosvendidos;
+    private int precioventa ;
+
+    public int getIdventa() {
+        return idventa;
+    }
+
+    public void setIdventa(int idventa) {
+        this.idventa = idventa;
+    }
+
+    public int getIdvehiculo() {
+        return idvehiculo;
+    }
+
+    public void setIdvehiculo(int idvehiculo) {
+        this.idvehiculo = idvehiculo;
+    }
+
+    public int getCantvehiculosvendidos() {
+        return cantvehiculosvendidos;
+    }
+
+    public void setCantvehiculosvendidos(int cantvehiculosvendidos) {
+        this.cantvehiculosvendidos = cantvehiculosvendidos;
+    }
+
+    public int getPrecioventa() {
+        return precioventa;
+    }
+
+    public void setPrecioventa(int precioventa) {
+        this.precioventa = precioventa;
+    }
+    
     
 }

@@ -4,10 +4,17 @@
  */
 package com.rentaCar.service;
 
+
+import com.rentaCar.entity.DetalleVenta;
+import java.util.List;
+
 /**
  *
  * @author Diego Segura Vega
  */
 public interface IDetalleVentaService {
-    
+    public List<DetalleVenta> getAllDetalleVenta();
+    public DetalleVenta getDetalleVentaById(long idventa);
+    public void saveDetalleVenta(DetalleVenta detalleVenta);
+    public void delete(long idventa);
 }
