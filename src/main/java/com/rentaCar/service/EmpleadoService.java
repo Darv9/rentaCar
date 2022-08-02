@@ -10,36 +10,39 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
-
 /**
  *
  * @author Diego Segura Vega
  */
 @Service
-public class EmpleadoService implements IEmpleadoService{
+public class EmpleadoService implements IEmpleadoService {
 
     @Autowired
-      private EmpleadoRepository EmpleadoRepository;
+    private EmpleadoRepository EmpleadoRepository;
 
     @Override
     public List<Empleado> getAllEmpleado() {
-        return (List<Empleado>)EmpleadoRepository.findAll();
+        return (List<Empleado>) EmpleadoRepository.findAll();
     }
 
     @Override
     public Empleado getEmpleadoById(long idEmpleado) {
-         return EmpleadoRepository.findById(idEmpleado).orElse(null);
+        return EmpleadoRepository.findById(idEmpleado).orElse(null);
     }
 
     @Override
     public void saveEmpleado(Empleado empleado) {
-        EmpleadoRepository.save(empleado); 
+        EmpleadoRepository.save(empleado);
     }
 
     @Override
     public void delete(long idEmpleado) {
-         EmpleadoRepository.deleteById(idEmpleado);
+        EmpleadoRepository.deleteById(idEmpleado);
     }
-    
+
+    @Override
+    public Empleado findByNombre(String nombre) {
+        return EmpleadoRepository.findByNombre(nombre);
+    }
+
 }

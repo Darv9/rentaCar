@@ -12,8 +12,10 @@ import java.util.List;
  * @author Diego Segura Vega
  */
 public interface IEmpleadoService {
+
     public List<Empleado> getAllEmpleado();
     public Empleado getEmpleadoById(long idEmpleado);
     public void saveEmpleado(Empleado empleado);
     public void delete(long idEmpleado);
+    public Empleado findByNombre(String nombre);
 }
