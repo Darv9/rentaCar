@@ -30,7 +30,7 @@
                     <td th:text="${user.getTelefono}"></td>
                     <td th:text="${user.getCorreo}"></td>
                     <td th:text="${user.getDomicilio}"></td>
-                    <td th:text="${user.getNacionalidad.getNacionalidad}"></td>
+                    <td th:text="${user.getNacionalidad}"></td>
                     <td>
                         <a th:href="@{/editCliente/{id}(id=${user.getId})}" th:text = "#{accion.editar}"></a>
                     </td>
