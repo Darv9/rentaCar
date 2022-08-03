@@ -17,5 +17,5 @@ public interface IEmpleadoService {
     public Empleado getEmpleadoById(long idEmpleado);
     public void saveEmpleado(Empleado empleado);
     public void delete(long idEmpleado);
-    public Empleado findByNombre(String nombre);
+    public Empleado findByCorreo(String correo);
 }

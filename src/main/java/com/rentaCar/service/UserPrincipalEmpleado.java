@@ -48,7 +48,7 @@ public class UserPrincipalEmpleado implements UserDetails{
 
     @Override
     public String getUsername() {
-      return this.empleado.getNombre();
+      return this.empleado.getCorreo();
     }
 
     @Override

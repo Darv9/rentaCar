@@ -26,19 +26,83 @@ public class Empleado implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private long idempleado;
     private String nombre;
-    private long apellido2;
-    private long apellido1;
-    private long celular;
-    private long correo;
-    private long direccion;
-    private long cargo;
+    private String apellido2;
+    private String apellido1;
+    private String celular;
+    private String correo;
+    private String direccion;
+    private String cargo;
     
     private String password;
     private int active;
     private String roles="";
     private String permissions="";
+
+    public long getIdempleado() {
+        return idempleado;
+    }
+
+    public void setIdempleado(long idempleado) {
+        this.idempleado = idempleado;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido2() {
+        return apellido2;
+    }
+
+    public void setApellido2(String apellido2) {
+        this.apellido2 = apellido2;
+    }
+
+    public String getApellido1() {
+        return apellido1;
+    }
+
+    public void setApellido1(String apellido1) {
+        this.apellido1 = apellido1;
+    }
+
+    public String getCelular() {
+        return celular;
+    }
+
+    public void setCelular(String celular) {
+        this.celular = celular;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
 
     public String getPassword() {
         return password;
@@ -71,74 +135,8 @@ public class Empleado implements Serializable {
     public void setPermissions(String permissions) {
         this.permissions = permissions;
     }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public long getApellido2() {
-        return apellido2;
-    }
-
-    public void setApellido2(long apellido2) {
-        this.apellido2 = apellido2;
-    }
-
-    public long getApellido1() {
-        return apellido1;
-    }
-
-    public void setApellido1(long apellido1) {
-        this.apellido1 = apellido1;
-    }
-
-    public long getCelular() {
-        return celular;
-    }
-
-    public void setCelular(long celular) {
-        this.celular = celular;
-    }
-
-    public long getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(long correo) {
-        this.correo = correo;
-    }
-
-    public long getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(long direccion) {
-        this.direccion = direccion;
-    }
-
-    public long getCargo() {
-        return cargo;
-    }
-
-    public void setCargo(long cargo) {
-        this.cargo = cargo;
-    }
-
     
-    
-      public List<String> getRoleList(){
+    public List<String> getRoleList(){
         if(this.roles.length()>0){
             return Arrays.asList(this.roles.split(","));
         }

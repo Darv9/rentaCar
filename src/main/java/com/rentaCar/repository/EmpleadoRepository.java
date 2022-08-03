@@ -12,5 +12,5 @@ import org.springframework.data.repository.CrudRepository;
  * @author Diego Segura Vega
  */
 public interface EmpleadoRepository extends CrudRepository<Empleado,Long>{
-      Empleado findByNombre(String nombre);
+      Empleado findByCorreo(String correo);
 }

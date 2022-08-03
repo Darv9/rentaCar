@@ -51,28 +51,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) {
         auth.authenticationProvider(authenticationProvider());
     }
-    //El siguiente método funciona para hacer la autenticación del usuario
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        /* http.authorizeRequests()
-                .antMatchers("/persona","/login")
-                .hasRole("ADMIN")
-                .antMatchers("/personasN", "/persona", "/","/login")
-                .hasAnyRole("USER", "VENDEDOR", "ADMIN")
-                .anyRequest().authenticated()
-                .and()
-                .formLogin();    
-        */
         http.authorizeRequests()
                 .antMatchers("/clientes","/login","/clienteN", "/detalleRenta", "/detalleRentaN", "/reclamo", "/detalleVentaN", "/empleado", "/empleadoN", "/nacionalidad", "/nacionalidadN")
                 .hasRole("ADMIN")
                 .antMatchers("/clientes", "/","/login")
-                .hasAnyRole("USER", "EMPLEADO", "ADMIN")
+                .hasAnyRole("USER", "PLAT", "ADMIN")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
                 .loginPage("/login").permitAll().defaultSuccessUrl("/clientes",true);
     }
-    //El siguiente método funciona parsa realizar la autorización de accesos
-    //i18n
 }

@@ -41,8 +41,8 @@ public class EmpleadoService implements IEmpleadoService {
     }
 
     @Override
-    public Empleado findByNombre(String nombre) {
-        return EmpleadoRepository.findByNombre(nombre);
+    public Empleado findByCorreo(String correo) {
+        return EmpleadoRepository.findByCorreo(correo);
     }
 
 }

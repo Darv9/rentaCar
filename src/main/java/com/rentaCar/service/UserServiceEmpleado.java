@@ -24,12 +24,11 @@ public class UserServiceEmpleado implements UserDetailsService{
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Empleado empleado=this.empleadoService.findByNombre(username);
+        Empleado empleado=this.empleadoService.findByCorreo(username);
         UserPrincipalEmpleado userPrincipalEmpleado= new UserPrincipalEmpleado(empleado);
         return userPrincipalEmpleado;
     }
     
- 
 }
 
 
