@@ -33,8 +33,8 @@ public class EmpleadoController {
     
     @GetMapping("/empleadoN")
     public String agregarEmpleado (Model model){
-        model.addAttribute("vehiculo",new Empleado());
-        return "empleado";
+        model.addAttribute("empleado",new Empleado());
+        return "crearEmpleado";
     }
 
     @GetMapping("/editEmpleado/{idempleado}")

@@ -17,23 +17,24 @@ public class Nacionalidad implements Serializable{
     
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private long idNacionalidad;
-    private String nom_Nacionalidad;
+    private long idnacionalidad;
+    private String nacionalidad;
 
-    public long getIdNacionalidad() {
-        return idNacionalidad;
+    public long getIdnacionalidad() {
+        return idnacionalidad;
     }
 
-    public void setIdNacionalidad(long idNacionalidad) {
-        this.idNacionalidad = idNacionalidad;
+    public void setIdnacionalidad(long idnacionalidad) {
+        this.idnacionalidad = idnacionalidad;
     }
 
-    public String getNom_Nacionalidad() {
-        return nom_Nacionalidad;
+    public String getNacionalidad() {
+        return nacionalidad;
     }
 
-    public void setNom_Nacionalidad(String nom_Nacionalidad) {
-        this.nom_Nacionalidad = nom_Nacionalidad;
+    public void setNacionalidad(String nacionalidad) {
+        this.nacionalidad = nacionalidad;
     }
    
+    
 }

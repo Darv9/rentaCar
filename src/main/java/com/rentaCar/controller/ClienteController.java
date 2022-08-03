@@ -1,7 +1,9 @@
 package com.rentaCar.controller;
 
 import com.rentaCar.entity.Cliente;
+import com.rentaCar.entity.Nacionalidad;
 import com.rentaCar.service.IClienteService;
+import com.rentaCar.service.INacionalidadService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,6 +19,9 @@ public class ClienteController {
 
     @Autowired
     private IClienteService clienteService;
+    
+    @Autowired
+    private INacionalidadService nacionalidadService;
 
     @GetMapping("/clientes")
     public String indexCliente(Model model) {
@@ -28,7 +33,9 @@ public class ClienteController {
 
     @GetMapping("/clienteN")
     public String crearCliente(Model model) {
+        List<Nacionalidad> listaNacionalidades = nacionalidadService.listNacionalidad();
         model.addAttribute("cliente", new Cliente());
+        model.addAttribute("nacionalidades", listaNacionalidades);
         return "crear";
     }
 

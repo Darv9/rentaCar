@@ -22,8 +22,8 @@ public class NacionalidadService implements INacionalidadService{
     }
 
     @Override
-    public Nacionalidad getNacionalidadById(long idNacionalidad) {
-        return nacionalidadRepository.findById(idNacionalidad).orElse(null);
+    public Nacionalidad getNacionalidadById(long idnacionalidad) {
+        return nacionalidadRepository.findById(idnacionalidad).orElse(null);
     }
 
     @Override
@@ -34,6 +34,11 @@ public class NacionalidadService implements INacionalidadService{
     @Override
     public void deleteNacionalidad(long id) {
        nacionalidadRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Nacionalidad> listNacionalidad() {
+        return (List<Nacionalidad>)nacionalidadRepository.findAll();
     }
 
 }

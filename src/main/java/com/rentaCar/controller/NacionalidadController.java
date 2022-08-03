@@ -40,15 +40,15 @@ public class NacionalidadController {
         return "redirect:/nacionalidad";
     }
 
-    @GetMapping("/editNacionalidad/{idNacionalidad}")
-    public String editarNacionalidad(@PathVariable("idNacionalidad") Long idNacionalidad, Model model) {
+    @GetMapping("/editNacionalidad/{idnacionalidad}")
+    public String editarNacionalidad(@PathVariable("idnacionalidad") Long idNacionalidad, Model model) {
         Nacionalidad nacionalidad = nacionalidadService.getNacionalidadById(idNacionalidad);
         model.addAttribute("nacionalidad", nacionalidad);
         return "crearNacionalidad";
     }
     
-    @GetMapping("/deleteNacionalidad/{idNacionalidad}")
-    public String deleteCliente(@PathVariable("idNacionalidad") Long idNacionalidad) {
+    @GetMapping("/deleteNacionalidad/{idnacionalidad}")
+    public String deleteCliente(@PathVariable("idnacionalidad") Long idNacionalidad) {
         nacionalidadService.deleteNacionalidad(idNacionalidad);
         return "redirect:/nacionalidad";
     }

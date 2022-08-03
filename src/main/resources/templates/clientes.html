@@ -16,7 +16,9 @@
                     <th scope="col">Telefono </th>
                     <th scope="col">Correo </th>
                     <th scope="col">Domicilio </th>
+                    <th scope="col">Nacionalidad </th>
                     <th scope="col">Editar </th>
+                    <th scope="col">Eliminar </th>
                 </tr>
             </thead> 
             <tbody>   
@@ -29,16 +31,18 @@
                     <td th:text="${user.getTelefono}"></td>
                     <td th:text="${user.getCorreo}"></td>
                     <td th:text="${user.getDomicilio}"></td>
+                    <td th:text="${user.getNacionalidad.getNacionalidad}"></td>
                     <td>
                         <a th:href="@{/editCliente/{id}(id=${user.getId})}">Edit</a>
+                    </td>
+                    <td>
+                        <a th:href="@{/delete/{id}(id=${user.getId})}">Delete</a>
                     </td>
                 </tr>
             </th:block>
         </tbody>
     </table>
     <a class="btn btn-primary" href="/clienteN" role="button">Agregar Cliente</a>
-    
     <footer th:replace="plantilla/template::footer"></footer>
-
 </body> 
 </html>

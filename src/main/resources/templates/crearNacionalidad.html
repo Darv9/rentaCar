@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    
     <head th:replace="plantilla/template::head"></head>
-    
     <body class="body" style="background: linear-gradient(180deg, #FFFFFF, #A6A492);">
         <form th:object = "${nacionalidad}"
               th:action = "@{/saveNacionalidad}"
@@ -15,7 +13,6 @@
                     <input type="text" class="form-control" id="inputEmail3" th:field="*{nombre Nacionalidad}">
                 </div>
             </div>
-        
             <button type="submit" class="btn btn-primary" value="Guardar">Submit</button>
         </form>
         <footer th:replace="plantilla/template::footer"></footer>

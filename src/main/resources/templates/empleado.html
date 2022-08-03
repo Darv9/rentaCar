@@ -5,7 +5,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Empleados</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -14,7 +14,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <table class="table table-dark table-sm">
             <thead class = "thead-dark">
                 <tr>
-                    <th scope="col">Id Empleado </th>
+                    <th scope="col">Id Empleado</th>
                     <th scope="col">Nombre </th>
                     <th scope="col">Apellido 1</th>
                     <th scope="col">Apellido 2</th>
@@ -35,10 +35,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <td th:text="${user.getCorreo}"></td>
                     <td th:text="${user.getDireccion}"></td>
                     <td th:text="${user.getCargo}"></td>
-
-
                     <td>
-                        <a th:href="@{/editEmpleado/{id}(id=${user.getIdReclamo})}">Edit</a>
+                        <a th:href="@{/editEmpleado/{id}(id=${user.getIdEmpleado})}">Edit</a>
                     </td>
                     <td>
                         <a th:href="@{/delete/{id}(id=${user.getIdEmpleado})}">Delete</a>
