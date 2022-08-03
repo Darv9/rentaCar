@@ -3,7 +3,7 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
@@ -14,11 +14,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
               th:action = "@{/save}"
               method='POST'
               >
-            <input type="hidden" th:field="*{idEmpleado}">
+            <input type="hidden" th:field="*{idempleado}">
             <div class="row mb-3">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Id Empleado</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" th:field="*{idEmpleado}">
+                    <input type="text" class="form-control" id="inputEmail3" th:field="*{idempleado}">
                 </div>
             </div>
             <div class="row mb-3">

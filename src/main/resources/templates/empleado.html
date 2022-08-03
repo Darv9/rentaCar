@@ -3,25 +3,25 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
-<html>
-    <head>
-        <title>Empleados</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
+<html html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="plantilla/template::head"></head>
+    <body class="body" style="background: linear-gradient(180deg, #FFFFFF, #A6A492); height: 100vh;">
+        <header th:replace="plantilla/template::header"></header>
         <h1 th:text = "${titulo}"> </h1>
-        <table class="table table-dark table-sm">
+        <h1 th:text = "#{cliente.nombre}"></h1>
+        <table class = "table table-secondary table-striped table-captiontop">
             <thead class = "thead-dark">
                 <tr>
                     <th scope="col">Id Empleado</th>
-                    <th scope="col">Nombre </th>
-                    <th scope="col">Apellido 1</th>
-                    <th scope="col">Apellido 2</th>
-                    <th scope="col">Celular</th>
-                    <th scope="col">Correo </th>
-                    <th scope="col">Direccion </th> 
-                    <th scope="col">Cargo </th> 
+                    <th th:text = "#{cliente.nombre}" ></th>
+                    <th th:text = "#{cliente.apellidos}"> </th>
+                    <th th:text = "#{cliente.apellidos}"> </th>
+                    <th th:text = "#{cliente.telefono}"></th>
+                    <th th:text = "#{cliente.correo}"></th>
+                    <th th:text = "#{empleado.direccion}"></th> 
+                    <th th:text = "#{empleado.cargo}"></th> 
+                    <th th:text = "#{accion.editar}"></th>
+                    <th th:text = "#{accion.eliminar}"> </th>
                 </tr>
             </thead> 
             <tbody>   
@@ -36,14 +36,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <td th:text="${user.getDireccion}"></td>
                     <td th:text="${user.getCargo}"></td>
                     <td>
-                        <a th:href="@{/editEmpleado/{id}(id=${user.getIdEmpleado})}">Edit</a>
+                        <a th:href="@{/editEmpleado/{id}(id=${user.getIdEmpleado})}" th:text = "#{accion.editar}"></a>
                     </td>
                     <td>
-                        <a th:href="@{/delete/{id}(id=${user.getIdEmpleado})}">Delete</a>
+                        <a th:href="@{/delete/{id}(id=${user.getIdEmpleado})}" th:text = "#{accion.eliminar}"></a>
                     </td>
                 </tr>
             </th:block>
         </tbody>
     </table>
+    <a class="btn btn-primary" href="/empleadoN" role="button" th:text = "#{accion.agregar}"></a>
+    <footer th:replace="plantilla/template::footer"></footer>
 </body>
 </html>

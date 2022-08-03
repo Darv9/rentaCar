@@ -1,24 +1,23 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
     <head th:replace="plantilla/template::head"></head>
-
     <body class="body" style="background: linear-gradient(180deg, #FFFFFF, #A6A492); height: 100vh;">
         <header th:replace="plantilla/template::header"></header>
-        <h1 th:text = "${titulo}"></h1>
-        <h1 th:text = "#{client.nombre}"></h1>
+        <h1 th:text = "#{plantilla.clientes}"></h1>
+        <h1 th:text = "#{cliente.datos}"></h1>
         <table class = "table table-secondary table-striped table-captiontop">
             <thead class = "thead-dark">
                 <tr>
                     <th scope="col">Id </th>
-                    <th scope="col">Nombre </th>
-                    <th scope="col">Apellido 1 </th>
-                    <th scope="col">Apellido 2 </th>
-                    <th scope="col">Telefono </th>
-                    <th scope="col">Correo </th>
-                    <th scope="col">Domicilio </th>
-                    <th scope="col">Nacionalidad </th>
-                    <th scope="col">Editar </th>
-                    <th scope="col">Eliminar </th>
+                    <th th:text = "#{cliente.nombre}" ></th>
+                    <th th:text = "#{cliente.apellidos}"> </th>
+                    <th th:text = "#{cliente.apellidos}"></th>
+                    <th th:text = "#{cliente.telefono}"></th>
+                    <th th:text = "#{cliente.correo}"> </th>
+                    <th th:text = "#{cliente.domicilio}"> </th>
+                    <th th:text = "#{cliente.nacionalidad}"> </th>
+                    <th th:text = "#{accion.editar}"></th>
+                    <th th:text = "#{accion.eliminar}"> </th>
                 </tr>
             </thead> 
             <tbody>   
@@ -33,16 +32,16 @@
                     <td th:text="${user.getDomicilio}"></td>
                     <td th:text="${user.getNacionalidad.getNacionalidad}"></td>
                     <td>
-                        <a th:href="@{/editCliente/{id}(id=${user.getId})}">Edit</a>
+                        <a th:href="@{/editCliente/{id}(id=${user.getId})}" th:text = "#{accion.editar}"></a>
                     </td>
                     <td>
-                        <a th:href="@{/delete/{id}(id=${user.getId})}">Delete</a>
+                        <a th:href="@{/delete/{id}(id=${user.getId})}" th:text = "#{accion.eliminar}"></a>
                     </td>
                 </tr>
             </th:block>
         </tbody>
     </table>
-    <a class="btn btn-primary" href="/clienteN" role="button">Agregar Cliente</a>
+    <a class="btn btn-primary" href="/clienteN" role="button" th:text = "#{accion.agregar}"></a>
     <footer th:replace="plantilla/template::footer"></footer>
 </body> 
 </html>
