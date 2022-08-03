@@ -26,8 +26,8 @@ public class EmpleadoService implements IEmpleadoService {
     }
 
     @Override
-    public Empleado getEmpleadoById(long idEmpleado) {
-        return EmpleadoRepository.findById(idEmpleado).orElse(null);
+    public Empleado getEmpleadoById(long idempleado) {
+        return EmpleadoRepository.findById(idempleado).orElse(null);
     }
 
     @Override
@@ -36,8 +36,8 @@ public class EmpleadoService implements IEmpleadoService {
     }
 
     @Override
-    public void delete(long idEmpleado) {
-        EmpleadoRepository.deleteById(idEmpleado);
+    public void delete(long idempleado) {
+        EmpleadoRepository.deleteById(idempleado);
     }
 
     @Override

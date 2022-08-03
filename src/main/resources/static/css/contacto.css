@@ -124,6 +124,8 @@ nav ul li a{
     box-sizing: border-box;
     margin-bottom: 500px;   
     margin-left: 25px;
+    border-radius: 25px;
+    border: 1px solid;
 }
 .absolute{
     background-color:#0B1D4D;
