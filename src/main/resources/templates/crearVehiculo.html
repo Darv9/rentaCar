@@ -84,15 +84,6 @@
                     <input type="decimal" class="form-control" id="inputPassword3" th:field="*{preciorenta}">
                 </div>
             </div>
-
-            <div class="form-group mb-3 row">
-                <label for="inputState" class="form-label">Vehiculo</label>
-                <select th:field="*{idvehiculo}" class="form-control form-control-sm col-md-6" id="idvehiculo">
-                    <option th:each="x:${idvehiculo}"
-                            th:value="${x.idvehiculo}"
-                            th:text="${x.idvehiculo}"/>
-                </select>
-            </div>
             <button type="submit" class="btn btn-primary" value="Guardar">Submit</button>
         </form>
 

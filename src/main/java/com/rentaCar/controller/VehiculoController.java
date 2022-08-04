@@ -45,12 +45,6 @@ public class VehiculoController {
         return "crearVehiculo";
     }
 
-    @GetMapping("/deletevehiculo/{idvehiculo}")
-    public String delete(@PathVariable("idvehiculo") Long idvehiculo) {
-        vehiculoService.deletevehiculo(idvehiculo);
-        return "redirect:/vehiculo";
-    }
-
     @PostMapping("/saveVehiculo")
     public String guardarVehiculo(@ModelAttribute Vehiculo vehiculo) {
         vehiculoService.saveVehiculo(vehiculo);
