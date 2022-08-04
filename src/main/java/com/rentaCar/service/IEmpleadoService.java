@@ -16,6 +16,6 @@ public interface IEmpleadoService {
     public List<Empleado> getAllEmpleado();
     public Empleado getEmpleadoById(long idEmpleado);
     public void saveEmpleado(Empleado empleado);
-    public void delete(long idEmpleado);
-    public Empleado findByCorreo(String correo);
+    public void delete(long idempleado);
+    public Empleado findByCorreo(String username);
 }

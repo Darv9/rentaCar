@@ -87,7 +87,7 @@
 
             <div class="form-group mb-3 row">
                 <label for="inputState" class="form-label">Vehiculo</label>
-                <select th:field="*{idreclamo}" class="form-control form-control-sm col-md-6" id="idvehiculo">
+                <select th:field="*{idvehiculo}" class="form-control form-control-sm col-md-6" id="idvehiculo">
                     <option th:each="x:${idvehiculo}"
                             th:value="${x.idvehiculo}"
                             th:text="${x.idvehiculo}"/>

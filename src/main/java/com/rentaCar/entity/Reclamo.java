@@ -29,7 +29,7 @@ public class Reclamo implements Serializable {
     private int idvehiculo;
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date fechareclamo;
-    private char descripcionreclamo;
+    private String descripcionreclamo;
 
     public long getIdreclamo() {
         return idreclamo;
@@ -63,13 +63,14 @@ public class Reclamo implements Serializable {
         this.fechareclamo = fechareclamo;
     }
 
-    public char getDescripcionreclamo() {
+    public String getDescripcionreclamo() {
         return descripcionreclamo;
     }
 
-    public void setDescripcionreclamo(char descripcionreclamo) {
+    public void setDescripcionreclamo(String descripcionreclamo) {
         this.descripcionreclamo = descripcionreclamo;
     }
+
     
 
 }

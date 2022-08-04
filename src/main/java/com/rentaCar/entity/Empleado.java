@@ -12,6 +12,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
@@ -39,6 +41,10 @@ public class Empleado implements Serializable {
     private int active;
     private String roles="";
     private String permissions="";
+    
+    @ManyToOne
+    @JoinColumn(name="nacionalidad_id")
+    private Nacionalidad nacionalidad;
 
     public long getIdempleado() {
         return idempleado;
@@ -134,6 +140,14 @@ public class Empleado implements Serializable {
 
     public void setPermissions(String permissions) {
         this.permissions = permissions;
+    }
+
+    public Nacionalidad getNacionalidad() {
+        return nacionalidad;
+    }
+
+    public void setNacionalidad(Nacionalidad nacionalidad) {
+        this.nacionalidad = nacionalidad;
     }
     
     public List<String> getRoleList(){

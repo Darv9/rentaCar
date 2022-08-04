@@ -5,7 +5,9 @@
 package com.rentaCar.controller;
 
 import com.rentaCar.entity.Empleado;
+import com.rentaCar.entity.Nacionalidad;
 import com.rentaCar.service.IEmpleadoService;
+import com.rentaCar.service.INacionalidadService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,10 +23,13 @@ public class EmpleadoController {
   
    
     @Autowired
+    private INacionalidadService nacionalidadService;
+    
+    @Autowired
     private IEmpleadoService empleadoService;
 
     @GetMapping("/empleado")
-    public String index(Model model) {
+    public String indexEmpleado(Model model) {
         List<Empleado> listaEmpleado = empleadoService.getAllEmpleado();
         model.addAttribute("titulo", "Tabla Empleado");
         model.addAttribute("empleado", listaEmpleado);
@@ -33,6 +38,8 @@ public class EmpleadoController {
     
     @GetMapping("/empleadoN")
     public String agregarEmpleado (Model model){
+        List<Nacionalidad> listaNacionalidades = nacionalidadService.listNacionalidad();
+        model.addAttribute("nacionalidades", listaNacionalidades);
         model.addAttribute("empleado",new Empleado());
         return "crearEmpleado";
     }

@@ -12,7 +12,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <table class = "table table-secondary table-striped table-captiontop">
             <thead class = "thead-dark">
                 <tr>
-                    <th scope="col">Id Empleado</th>
+                    <th scope="col">Id </th>
                     <th th:text = "#{cliente.nombre}" ></th>
                     <th th:text = "#{cliente.apellidos}"> </th>
                     <th th:text = "#{cliente.apellidos}"> </th>
@@ -27,7 +27,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <tbody>   
             <th:block th:each="user : ${empleados}">
                 <tr>
-                    <td th:text="${user.getIdEmpelado}"></td>
+                    <td th:text="${user.getIdempleado}"></td>
                     <td th:text="${user.getNombre}"></td>
                     <td th:text="${user.getApellido1}"></td>
                     <td th:text="${user.getApellido2}"></td>
@@ -36,10 +36,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <td th:text="${user.getDireccion}"></td>
                     <td th:text="${user.getCargo}"></td>
                     <td>
-                        <a th:href="@{/editEmpleado/{id}(id=${user.getIdEmpleado})}" th:text = "#{accion.editar}"></a>
+                        <a th:href="@{/editEmpleado/{id}(id=${user.getIdempleado})}" th:text = "#{accion.editar}"></a>
                     </td>
                     <td>
-                        <a th:href="@{/delete/{id}(id=${user.getIdEmpleado})}" th:text = "#{accion.eliminar}"></a>
+                        <a th:href="@{/delete/{id}(id=${user.getIdempleado})}" th:text = "#{accion.eliminar}"></a>
                     </td>
                 </tr>
             </th:block>

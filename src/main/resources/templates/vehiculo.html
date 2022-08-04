@@ -19,6 +19,7 @@
                     <th scope="col">Cant. Puertas </th>
                     <th scope="col">Cant. Asientos</th>
                     <th scope="col">Precio de Renta </th> 
+                    <!-- <th th:text = "#{accion.eliminar}"> </th> -->
                 </tr>
             </thead> 
             <tbody>   
@@ -36,9 +37,9 @@
                     <td th:text="${user.getNumpuertas}"></td>
                     <td th:text="${user.getNumasientos}"></td>
                     <td th:text="${user.getPreciorenta}"></td>
-                    <td>
+                    <!-- <td>
                         <a th:href="@{/deletevehiculo/{idvehiculo}(idvehiculo=${user.getIdvehiculo})}">Delete</a>
-                    </td>
+                    </td> --> 
                 </tr>
             </th:block>
         </tbody>

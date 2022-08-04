@@ -17,28 +17,10 @@ public class NacionalidadService implements INacionalidadService{
     private NacionalidadRepository nacionalidadRepository;
 
     @Override
-    public List<Nacionalidad> getAllNacionalidad() {
-     return (List<Nacionalidad>)nacionalidadRepository.findAll();
-    }
-
-    @Override
-    public Nacionalidad getNacionalidadById(long idnacionalidad) {
-        return nacionalidadRepository.findById(idnacionalidad).orElse(null);
-    }
-
-    @Override
-    public void saveNacionalidad(Nacionalidad nacionalidad) {
-      nacionalidadRepository.save(nacionalidad);
-    }
-
-    @Override
-    public void deleteNacionalidad(long id) {
-       nacionalidadRepository.deleteById(id);
-    }
-
-    @Override
     public List<Nacionalidad> listNacionalidad() {
         return (List<Nacionalidad>)nacionalidadRepository.findAll();
     }
+
+    
 
 }

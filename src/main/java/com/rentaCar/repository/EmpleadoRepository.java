@@ -6,11 +6,13 @@ package com.rentaCar.repository;
 
 import com.rentaCar.entity.Empleado;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author Diego Segura Vega
  */
+@Repository
 public interface EmpleadoRepository extends CrudRepository<Empleado,Long>{
       Empleado findByCorreo(String correo);
 }
