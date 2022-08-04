@@ -9,4 +9,6 @@ public interface IClienteService {
     public void saveCliente(Cliente cliente);
     public void deleteCliente(long id);
     public Cliente findByNombre (String correo);
+
+    public Cliente findBycorreo(String username);
 }

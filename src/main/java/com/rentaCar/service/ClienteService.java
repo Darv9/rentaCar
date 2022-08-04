@@ -11,30 +11,35 @@ import org.springframework.stereotype.Service;
 public class ClienteService implements IClienteService{
     
     @Autowired
-    private ClienteRepository clienteRepository;
+    private ClienteRepository ClienteRepository;
 
     @Override
     public List<Cliente> getAllCliente() {
-        return (List<Cliente>)clienteRepository.findAll();
+        return (List<Cliente>)ClienteRepository.findAll();
     }
 
     @Override
     public Cliente getClienteById(long id) {
-        return clienteRepository.findById(id).orElse(null);
+        return ClienteRepository.findById(id).orElse(null);
     }
 
     @Override
     public void saveCliente(Cliente cliente) {
-        clienteRepository.save(cliente);
+        ClienteRepository.save(cliente);
     }
 
     @Override
-    public void deleteCliente(long id) {
-        clienteRepository.deleteById(id);
+    public void deleteCliente(long idcliente) {
+        ClienteRepository.deleteById(idcliente);
+    }
+   
+    @Override
+    public Cliente findByNombre(String nombre) {
+           return ClienteRepository.findByCorreo(nombre);
     }
 
     @Override
-    public Cliente findByNombre(String correo) {
-        return clienteRepository.findByNombre(correo);
+    public Cliente findBycorreo(String correo) {
+      return ClienteRepository.findByCorreo(correo);
     }
 }
