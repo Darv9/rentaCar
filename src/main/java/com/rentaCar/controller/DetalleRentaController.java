@@ -51,7 +51,7 @@ public class DetalleRentaController {
         return "crearDetalleRenta";
     }
 
-    @GetMapping("/delete/{idrenta}")
+    @GetMapping("/deleteRenta/{idrenta}")
     public String delete(@PathVariable("idrenta") Long idrenta) {
         detalleRentaService.delete(idrenta);
         return "redirect:/detalleRenta";
