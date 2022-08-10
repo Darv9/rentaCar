@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 
 
@@ -50,5 +51,19 @@ public class VehiculoController {
         vehiculoService.saveVehiculo(vehiculo);
         return "redirect:/vehiculo";
     }
+    
+    @GetMapping("/paginaVehiculo1/1")
+    public String showCar1(@PathVariable("1") Long idvehiculo, Model model){
+        List<Vehiculo> listaVehiculo = vehiculoService.getSelectedVehiculoById(idvehiculo);
+        model.addAttribute("titulo", "Tabla Vehiculo");
+        model.addAttribute("vehiculo", listaVehiculo);
+        return "sparkIndex";
+    } 
+    
+    /*@RequestMapping("/deletevehiculo/{idvehiculo}")
+    public String deleteCliente(@PathVariable("id") Long id) {
+        vehiculoService.deletevehiculo(id);
+        return "sparkIndex.html";
+    }*/
 }
 

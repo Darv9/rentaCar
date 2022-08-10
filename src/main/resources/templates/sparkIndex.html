@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="plantilla/template::head"></head>
+    <body style = "height: 200vh">
+        <div class='container'>
+            <div class = 'navbar'> 
+                <a href="index.html"><img src="images/logo.png" class ='logo' alt="Este es el logo del rentacar"/></a>
+                <nav>
+                    <ul>                         
+                        <li> <a href="index.html">Home</a></li>
+                        <li> <a href="catalogo.html">Flota y Tarifas</a> </li>
+                        <li> <a href="booking.html">Reserva</a> </li>
+                        <li> <a href="renting.html">Renting</a> </li>
+                        <li> <a href="contacto.html">Contacto</a></li>
+                        <li> <a href="loginProyecto.html">Login</a> </li>
+                    </ul>
+                </nav>
+            </div> 
+            <div class = 'info'>
+                <h1>Chevrolet Spark - 2021</h1>
+                <h2>Costo alquiler por día: 25000</h2>
+                <p>Chevrolet spark, un automovil diseñado para cumplir y sobresalir en las necesidades más basicas esperadas de un vehículo de tipo familiar por 
+                    el precio de 25 000 colones diarios, usted podría obtener el benefecio de uso de este vehículo con todos 
+                    <br> los seguros necesarios para su protección como pasajero y cliente.</p>
+                <p>Carro de 5 campos <br> Tracción: Automático <br> Costo de alquiler: 25000 por dia</p>
+                <iframe width="1280" height="720" src="https://www.youtube.com/embed/h_KD36bwVNA" title="Chevrolet Spark" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class = 'reserva'>
+                <table class = "table table-secondary table-striped table-captiontop">
+                    <thead class = "thead-dark">
+                        <tr>
+                            <th scope="col">Id Vehiculo </th>
+                            <th scope="col">Modelo </th>
+                            <th scope="col">Año</th>
+                            <th scope="col">Color </th> 
+                            <th scope="col">Marca </th>
+                            <th scope="col">Descripción Vehiculo </th>
+                            <th scope="col">Material</th>
+                            <th scope="col">Tipo de Motor </th> 
+                            <th scope="col">Kilometraje </th>
+                            <th scope="col">Cant. Puertas </th>
+                            <th scope="col">Cant. Asientos</th>
+                            <th scope="col">Precio de Renta </th> 
+                            <th th:text = "#{accion.editar}"> </th> 
+                        </tr>
+                    </thead> 
+                    <tbody>   
+                    <th:block th:each="user : ${vehiculo}">
+                        <tr>
+                            <td th:text="${user.getIdvehiculo}"></td>
+                            <td th:text="${user.getModelo}"></td>
+                            <td th:text="${user.getAnnio}"></td>
+                            <td th:text="${user.getColor}"></td>
+                            <td th:text="${user.getMarca}"></td>
+                            <td th:text="${user.getDescripcionvehiculo}"></td>
+                            <td th:text="${user.getMaterial}"></td>
+                            <td th:text="${user.getTipomotor}"></td>
+                            <td th:text="${user.getKilometraje}"></td>
+                            <td th:text="${user.getNumpuertas}"></td>
+                            <td th:text="${user.getNumasientos}"></td>
+                            <td th:text="${user.getPreciorenta}"></td>
+                            <td>
+                                <a th:href="@{/editvehiculo/{idvehiculo}(idvehiculo=${user.getIdvehiculo})}" th:text = "#{accion.editar}"></a>
+                            </td>
+                        </tr>
+                    </th:block>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

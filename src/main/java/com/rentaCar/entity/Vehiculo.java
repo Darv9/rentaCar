@@ -33,7 +33,7 @@ public class Vehiculo implements Serializable {
     private int kilometraje;
     private int numpuertas;
     private int numasientos;
-    private long preciorenta;
+    private int preciorenta;
 
     public long getIdvehiculo() {
         return idvehiculo;
@@ -127,7 +127,7 @@ public class Vehiculo implements Serializable {
         return preciorenta;
     }
 
-    public void setPreciorenta(long preciorenta) {
+    public void setPreciorenta(int preciorenta) {
         this.preciorenta = preciorenta;
     }
     

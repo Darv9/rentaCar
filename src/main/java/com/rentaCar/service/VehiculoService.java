@@ -37,5 +37,10 @@ public class VehiculoService implements IVehiculoService{
         vehiculoRepository.deleteById(idvehiculo);
     }
 
+    @Override
+    public List<Vehiculo> getSelectedVehiculoById(long idvehiculo) {
+        return (List<Vehiculo>) vehiculoRepository.findById(idvehiculo).orElse(null);
+    }
+
     
 }

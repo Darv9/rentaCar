@@ -38,7 +38,7 @@
                     <td th:text="${user.getNumasientos}"></td>
                     <td th:text="${user.getPreciorenta}"></td>
                     <td>
-                        <a th:href="@{/editvehiculo/{idvehiculo}(id=${user.getIdvehiculo})}" th:text = "#{accion.editar}"></a>
+                        <a th:href="@{/editvehiculo/{idvehiculo}(idvehiculo=${user.getIdvehiculo})}" th:text = "#{accion.editar}"></a>
                     </td>
                 </tr>
             </th:block>

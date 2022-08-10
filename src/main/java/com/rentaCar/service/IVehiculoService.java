@@ -12,4 +12,5 @@ public interface IVehiculoService {
     public Vehiculo getVehiculoById(long idvehiculo);
     public void saveVehiculo(Vehiculo vehiculo);
     public void deletevehiculo(long idvehiculo);
+    public List<Vehiculo> getSelectedVehiculoById(long idvehiculo);
 }
