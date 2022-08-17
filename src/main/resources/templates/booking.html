@@ -8,119 +8,47 @@
         <table class = "table table-secondary table-striped table-captiontop">
             <thead class = "thead-dark">
                 <tr>
-            <link rel="stylesheet" href="css/booking.css">
+                    <th scope="col">Card </th>
+                    <th th:text = "#{booking.nombre}" ></th>
+                    <th th:text = "#{booking.apellidos}"> </th>
+                    <th th:text = "#{booking.telefono}"></th>
+                    <th th:text = "#{booking.correo}"> </th>
+                    <th th:text = "#{booking.domicilio}"> </th>
+                    <th th:text = "#{booking.tarjeta}"> </th>
+                    <th th:text = "#{booking.retiro}" ></th>
+                    <th th:text = "#{booking.devolucion}"> </th>
+                    <th th:text = "#{booking.codigo}"> </th>
+                    <th th:text = "#{accion.editar}"></th>
+                    <th th:text = "#{accion.eliminar}"> </th>
+                </tr>
 
 
-            </head>
-
-
-            <body>
-                <div class='container'>
-
-                    <div class = 'navbar'> 
-                        <a href="index.html"><img src="images/logo.png" class ='logo' alt="Este es el logo del rentacar"/></a>
-                        <nav>
-                            <ul>                         
-                                <li> <a href="index.html">Home</a></li>
-                                <li> <a href="catalogo.html">Flota y Tarifas</a> </li>
-                                <li> <a href="renting.html">Renting</a> </li>
-                                <li> <a href="contacto.html">Contacto</a></li>
-                                <li> <a href="loginProyecto.html">Login</a> </li>
-                            </ul>
-                        </nav>
-                    </div>         
-
-                    <section class="form-register">
-                        <h4>Booking - Información Personal</h4>
-                        <input class="controls" type="text" name="nombres" id="nombres" th:field="*{nombre}" placeholder="Ingrese su Nombre">
-                        <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese sus Apellidos">
-                        <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-                        <input class="controls" type="email confirmation" name="correo" id="correo" placeholder="Confirme su Correo">
-                        <input class="controls" type="number" name="telefono" id="telefono" placeholder="Ingrese su Telefono">
-
-                        <div class="controls">
-                            <div class="controls">
-                                <label for="checkin" class="field-label">Check-in Date</label>
-                                <label for="checkin" class="field prepend-icon">
-                                    <input type="date" id="checkin" name="checkin" class="gui-input" required="" placeholder="mm/dd/yyyy">
-                                    <span class="field-icon"><i class="fa fa-calendar"></i></span>  
-                                </label>
-                            </div>
-
-                            <div class="controls">
-                                <label for="checkout" class="field-label">Check-out Date</label>
-                                <label for="checkout" class="field prepend-icon">
-                                    <input type="date" id="checkout" name="checkout" class="gui-input" required="" placeholder="mm/dd/yyyy">
-                                    <span class="field-icon"><i class="fa fa-calendar"></i></span>  
-                                </label>
-                            </div>
-                        </div>
-
-
-
-
-
-                    </section>
-
-                    <section class="form-register2">
-                        <h4>Booking - Información de Pago</h4>
-                        <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-                        <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese sus Apellidos">
-                        <input class="controls" type="number" name="# Tarjeta" id="tarjeta" placeholder="Numero de tarjeta">  
-                        <input class="controls" type="number" name="codigo" id="codigo" placeholder="Codigo de Seguridad - CVV">
-                        <label>Expiration Date</label>
-                        <select>
-                            <option value="01">Enero</option>
-                            <option value="02">Febrero </option>
-                            <option value="03">Marzo</option>
-                            <option value="04">Abril</option>
-                            <option value="05">Mayo</option>
-                            <option value="06">Junio</option>
-                            <option value="07">Julio</option>
-                            <option value="08">Agosto</option>
-                            <option value="09">Septiembre</option>
-                            <option value="10">Octubre</option>
-                            <option value="11">Noviembre</option>
-                            <option value="12">Deciembre</option>
-                        </select>
-                        <select>
-                            <option value="16"> 2022</option>
-                            <option value="17"> 2023</option>
-                            <option value="18"> 2024</option>
-                            <option value="19"> 2025</option>
-                            <option value="20"> 2026</option>
-                            <option value="21"> 2027</option>
-                            <option value="22"> 2028</option>
-                        </select>
-
-
-
-
-                        <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</p>
-
-
-
-                        <div class="cards" id="credit_cards">
-                            <img src="images/pagos.png" id="visa">
-
-                        </div>
-                        <div class="boton" id="confirmar">
-                            <button type="submit" class="boton" id="confirmar">CONFIRMAR BOOKING</button>
-                        </div>
-
-
-                    </section>
-
-                </div>
-
-
-
-                <footer>
-
-
-                </footer>
-
-
-
-            </body>
+            </thead> 
+            <tbody>   
+            <th:block th:each="user : ${booking}">
+                <tr>
+                    <td th:text="${user.getId}"></td>
+                    <td th:text="${user.getNombre}"></td>
+                    <td th:text="${user.getApellidos}"></td>
+                    <td th:text="${user.getTelefono}"></td>
+                    <td th:text="${user.getCorreo}"></td>
+                    <td th:text="${user.getDomicilio}"></td>
+                    <td th:text="${user.getTarjeta}"></td>
+                    <td th:text="${user.getRetiro}"></td>
+                    <td th:text="${user.getDevolucion}"></td>
+                    <td th:text="${user.getCodigo}"></td>
+                    <td>
+                        <a th:href="@{/editBooking/{id}(id=${user.getCard})}" th:text = "#{accion.editar}"></a>
+                    </td>
+                    <td>
+                        <a th:href="@{/deleteBooking/{id}(id=${user.getCard})}" th:text = "#{accion.eliminar}"></a>
+                    </td>
+                </tr>
+            </th:block>
+        </tbody>
+    </table>
+    <a class="btn btn-primary" href="/bookingN" role="button" th:text = "#{accion.agregar}"></a>
+    <footer th:replace="plantilla/template::footer"></footer>
+</body> 
 </html>
+
