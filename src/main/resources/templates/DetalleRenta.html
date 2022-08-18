@@ -14,15 +14,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <table class = "table table-secondary table-striped table-captiontop">
             <thead class = "thead-dark">
                 <tr>
-                    <th scope="col">Id Detalle Renta </th>
-                    <th scope="col">Id Vehiculo</th>
-                    <th scope="col">Cantidad de Vehiculos </th>
-                    <th scope="col">Dias de Renta </th>
-                    <th scope="col">Precio Vehiculo Unitario</th>
-                    <th scope="col">Precio Renta </th>
-                    <th scope="col">Provincia </th>
-                    <th scope="col">Editar </th>
-                    <th scope="col">Eliminar </th> 
+                     <th scope="col">Id</th>
+                    <th th:text = "#{detallerenta.detalles}" ></th>
+                    <th th:text = "#{detallerenta.idvehiculo}"> </th>
+                    <th th:text = "#{detallerenta.cantvehiculos}"></th>
+                    <th th:text = "#{detallerenta.diasrenta}"></th>
+                    <th th:text = "#{detallerenta.preveuni}"> </th>
+                    <th th:text = "#{detallerenta.preciorenta}"> </th>
+                    <th th:text = "#{detallerenta.provincia}"> </th>
+                    <th th:text = "#{accion.editar}"></th>
+                    <th th:text = "#{accion.eliminar}"> </th>
+                     
                 </tr>
             </thead> 
             <tbody>   
