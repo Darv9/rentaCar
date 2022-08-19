@@ -11,10 +11,11 @@
         <table class = "table table-secondary table-striped table-captiontop">
             <thead class = "thead-dark">
                 <tr>
-                    <th scope="col">Id Nacionalidad </th>
-                    <th scope="col">Nombre Nacionalidad </th>
-                    <th scope="col">Editar </th>
-                    <th scope="col">Eliminar</th>
+                    <th th:text = "#{nacionalidad.idnacionalidad}"> </th>
+                    <th th:text = "#{nacionalidad.nombrenacionalidad}"> </th>
+                    <th th:text = "#{accion.editar}"></th>
+                    <th th:text = "#{accion.eliminar}"> </th>
+                  
                 </tr>
             </thead> 
             <tbody>   
