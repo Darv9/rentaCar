@@ -52,18 +52,31 @@ public class VehiculoController {
         return "redirect:/vehiculo";
     }
     
-    @GetMapping("/paginaVehiculo1/1")
-    public String showCar1(@PathVariable("1") Long idvehiculo, Model model){
-        List<Vehiculo> listaVehiculo = vehiculoService.getSelectedVehiculoById(idvehiculo);
-        model.addAttribute("titulo", "Tabla Vehiculo");
-        model.addAttribute("vehiculo", listaVehiculo);
-        return "sparkIndex";
-    } 
-    
-    /*@RequestMapping("/deletevehiculo/{idvehiculo}")
-    public String deleteCliente(@PathVariable("id") Long id) {
+    @GetMapping("/deleteVehiculo/{idvehiculo}")
+    public String deleteVehiculo(@PathVariable("idvehiculo") Long id) {
         vehiculoService.deletevehiculo(id);
-        return "sparkIndex.html";
-    }*/
+        return "renta.html";
+    }
+    
+    @GetMapping("/sparkIndex")
+    public String Spark(){
+        return "sparkIndex";
+    }
+    
+    @GetMapping("/vitaraIndex")
+    public String Vitara(){
+        return "vitaraIndex";
+    }
+    
+    @GetMapping("/amarokIndex")
+    public String Amarok(){
+        return "amarokIndex";
+    }
+    
+    @GetMapping("/accentIndex")
+    public String Accent(){
+        return "accentIndex";
+    }
+    
 }
 

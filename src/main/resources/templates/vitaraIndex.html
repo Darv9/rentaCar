@@ -60,7 +60,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="d-grid gap-2">
-                <button class="btn btn-primary" type="button"><a href="th:href=@{/deleteVehiculo/{idvehiculo}(idvehiculo=${user.getIdvehiculo(2)})}" th:text = "#{accion.rentar}"></a></button>
+                <button class="btn btn-primary" type="button"><a href="th:href=@{/deleteVehiculo/{idvehiculo}(idvehiculo=2)}" th:text = "#{accion.rentar}"></a></button>
             </div>
         </div>
         <footer th:replace="plantilla/template::footer"></footer>
