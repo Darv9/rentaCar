@@ -78,5 +78,10 @@ public class VehiculoController {
         return "accentIndex";
     }
     
+    @GetMapping("/catalogoIndex")
+    public String Catalogo(){
+        return "catalogoIndex";
+    }
+    
 }
 

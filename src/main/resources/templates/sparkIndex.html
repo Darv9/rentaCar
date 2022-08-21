@@ -6,7 +6,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 <html xmlns:th="http://www.thymeleaf.org">
     <head th:replace="plantilla/template::head"></head>
     <body style = "height: 100vh ;background: linear-gradient(180deg, #FFFFFF, #A6A492);">
-        <div class='container'>
             <div class = 'navbar' style = " height:18vh;
                  width:100%;
                  display:flex;
@@ -50,19 +49,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 </nav>
             </div> 
             <div class = 'info'>
-                <h1>Chevrolet Spark - 2021</h1>
-                <h2>Costo alquiler por día: 25000</h2>
+                <h1>Chevrolet Spark - 2022</h1>
+                <h2>Costo alquiler por día: 56 000</h2>
                 <p>Chevrolet spark, un automovil diseñado para cumplir y sobresalir en las necesidades más basicas esperadas de un vehículo de tipo familiar por 
-                    el precio de 25 000 colones diarios, usted podría obtener el benefecio de uso de este vehículo con todos 
+                    el precio de 56 000 colones diarios, usted podría obtener el benefecio de uso de este vehículo con todos 
                     <br> los seguros necesarios para su protección como pasajero y cliente.</p>
                 <p>Carro de 5 campos <br> Tracción: Automático <br> Costo de alquiler: 25000 por dia</p>
-                <iframe width="1280" height="300" src="https://www.youtube.com/embed/h_KD36bwVNA" title="Chevrolet Spark" 
+                <iframe width="1280" height="330" src="https://www.youtube.com/embed/h_KD36bwVNA" title="Chevrolet Spark" 
                         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="d-grid gap-2">
-                <button class="btn btn-primary" type="button"><a href="th:href=@{/deleteVehiculo/{idvehiculo}(idvehiculo=${user.getIdvehiculo(2)})}" th:text = "#{accion.rentar}"></a></button>
+                <button class="btn btn-primary" type="button" ><a href="th:href=@{/deleteVehiculo/{idvehiculo}(idvehiculo=${user.getIdvehiculo(2)})}" th:text = "#{accion.rentar}"></a></button>
             </div>
-        </div>
         <footer th:replace="plantilla/template::footer"></footer>
     </body>
 </html>
