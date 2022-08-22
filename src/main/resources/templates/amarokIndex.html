@@ -55,12 +55,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <p>Chevrolet spark, un automovil diseñado para cumplir y sobresalir en las necesidades más basicas esperadas de un vehículo de tipo familiar por 
                     el precio de 75 500 colones diarios, usted podría obtener el benefecio de uso de este vehículo con todos 
                     <br> los seguros necesarios para su protección como pasajero y cliente.</p>
-                <p>Carro de 5 campos <br> Tracción: Automático <br> Costo de alquiler: 25000 por dia</p>
+                <p>Carro de 8 campos <br> Costo de alquiler: 75 500 por dia <br></p>
                 <iframe width="1280" height="330" src="https://www.youtube.com/embed/7MeMCEYprtk" title="The new Volkswagen Amarok | Product Features | Volkswagen Commercial Vehicles UK" frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="d-grid gap-2">
-                <button class="btn btn-primary" type="button"><a href="th:href=@{/deleteVehiculo/{idvehiculo}(idvehiculo=2)}" th:text = "#{accion.rentar}"></a></button>
+                <th:block th:each="user : ${clientes}">
+                <button class="btn btn-primary" type="button"><a href="th:href=@{/deleteVehiculo/{idvehiculo}(idvehiculo=3)}" th:text = "#{accion.rentar}"></a></button>
+                </th:block>
             </div>
         </div>
         <footer th:replace="plantilla/template::footer"></footer>
