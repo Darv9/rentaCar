@@ -63,18 +63,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 font-weight: bold;
                                 margin-top:5px;
                                 margin-bottom:25px;
-                                color: #0A0C26;">Hyundai Accent - 2021>Chevrolet Spark - 2020</h1>   
+                                color: #0A0C26;" th:text = "#{catalogo.nombre}">Hyundai Accent - 2021>Chevrolet Spark - 2020</h1>   
                             <h2 style = "text-align: center;
                                 font-size: 25px;
                                 font-weight: bold;
                                 margin-top:5px;
                                 margin-bottom:5px;
-                                color:darkred;">Costo alquiler por día: 25000</h2>
+                                color:darkred;" th:text = "#{catalogo.precio}">56000</h2>
                             <p style = "font-size: 20px;
                                font-weight: bold;
                                margin-top:15px;
                                margin-bottom:15px;
-                               margin-left: 35px;">Carro de 5 campos <br> Tracción: Automático <br> Costo de alquiler: 25000 por dia</p>
+                               margin-left: 35px;">Carro de 5 campos <br> Costo de alquiler: 56 000 por dia<br></p>
                             <a href="/sparkIndex" style = "position: relative;
                                font-weight: bold;
                                text-decoration: none;
@@ -96,18 +96,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 font-weight: bold;
                                 margin-top:5px;
                                 margin-bottom:25px;
-                                color: #0A0C26;">Hyundai Accent - 2021>Suzuki Vitara - 2021</h1>
+                                color: #0A0C26;" th:text = "#{catalogo.nombre}">Suzuki Vitara - 2021</h1>
                             <h2 style = "text-align: center;
                                 font-size: 25px;
                                 font-weight: bold;
                                 margin-top:5px;
                                 margin-bottom:5px;
-                                color:darkred;">Costo alquiler por día: 25000>Costo alquiler por día: 55000</h2>
+                                color:darkred;" th:text = "#{catalogo.precio}">64000</h2>
                             <p style = "font-size: 20px;
                                font-weight: bold;
                                margin-top:15px;
                                margin-bottom:15px;
-                               margin-left: 35px;">Carro de 7 campos <br> Tracción: 4x4 <br> Costo de alquiler: 55000 por dia</p>   
+                               margin-left: 35px;">Carro de 7 campos <br>Costo de alquiler: 55000 por dia <br></p>   
                             <a href="/vitaraIndex" style = "position: relative;
                                font-weight: bold;
                                text-decoration: none;
@@ -130,18 +130,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 font-weight: bold;
                                 margin-top:5px;
                                 margin-bottom:25px;
-                                color: #0A0C26;">Hyundai Accent - 2021>Volkswagen Amarok - 2022</h1>
+                                color: #0A0C26;" th:text = "#{catalogo.nombre}">Volkswagen Amarok - 2022</h1>
                             <h2 style = "text-align: center;
                                 font-size: 25px;
                                 font-weight: bold;
                                 margin-top:5px;
                                 margin-bottom:5px;
-                                color:darkred;">Costo alquiler por día: 25000>Costo alquiler por día: 45000</h2>
+                                color:darkred;" th:text = "#{catalogo.precio}">75500</h2>
                             <p style = "font-size: 20px;
                                font-weight: bold;
                                margin-top:15px;
                                margin-bottom:15px;
-                               margin-left: 35px;">Carro de 5 campos <br> Tracción: 4x4 <br> Costo de alquiler: 45000 por dia</p>
+                               margin-left: 35px;">Carro de 8 campos <br>Costo de alquiler: 75500 por dia<br> </p>
                             <a href="/amarokIndex" style = "position: relative;
                                font-weight: bold;
                                text-decoration: none;
@@ -164,18 +164,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 font-weight: bold;
                                 margin-top:5px;
                                 margin-bottom:25px;
-                                color: #0A0C26;">Hyundai Accent - 2021</h1>
+                                color: #0A0C26;" th:text = "#{catalogo.nombre}">Hyundai Accent - 2021</h1>
                             <h2 style = "text-align: center;
                                 font-size: 25px;
                                 font-weight: bold;
                                 margin-top:5px;
                                 margin-bottom:5px;
-                                color:darkred;">Costo alquiler por día: 25000>Costo alquiler por día: 35000</h2>
+                                color:darkred;" th:text = "#{catalogo.precio}">40500</h2>
                             <p style = "font-size: 20px;
                                font-weight: bold;
                                margin-top:15px;
                                margin-bottom:15px;
-                               margin-left: 35px;">Carro de 5 campos <br> Tracción: Manual <br> Costo de alquiler: 35000 por dia</p>
+                               margin-left: 35px;">Carro de 6 campos <br>Costo de alquiler: 40500 por dia <br></p>
                             <a href="/accentIndex" style = "position: relative;font-weight: bold;
                                text-decoration: none;
                                color:black;"> <img src="images/accent.png" class = 'carImg' style = "align-content: center;
@@ -190,6 +190,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 </div>
             </div>
         </div>
+        <footer th:replace="plantilla/template::footer"></footer>
     </body>
 </html>
 
