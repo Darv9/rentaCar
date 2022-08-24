@@ -48,7 +48,7 @@ public class EmpleadoController {
     public String editarVehiculo(@PathVariable("idempleado") Long idempleado, Model model) {
         Empleado empleado = empleadoService.getEmpleadoById(idempleado);
         model.addAttribute("empleado", empleado);
-        return "empleado";
+        return "crearEmpleado";
     }
 
     @GetMapping("/deleteEmpleado/{idempleado}")

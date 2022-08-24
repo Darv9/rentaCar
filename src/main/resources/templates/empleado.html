@@ -35,7 +35,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <td th:text="${user.getDireccion}"></td>
                     <td th:text="${user.getCargo}"></td>
                     <td>
-                        <a th:href="@{/editEmpleado/{id}(id=${user.getIdempleado})}" th:text = "#{accion.editar}"></a>
+                        <a th:href="@{/editEmpleado/{idempleado}(idempleado=${user.getIdempleado})}" th:text = "#{accion.editar}"></a>
                     </td>
                     <td>
                         <a th:href="@{/deleteEmpleado/{id}(id=${user.getIdempleado})}" th:text = "#{accion.eliminar}"></a>

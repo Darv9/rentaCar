@@ -8,5 +8,5 @@ public interface IClienteService {
     public Cliente getClienteById(long idCliente);
     public void saveCliente(Cliente cliente);
     public void deleteCliente(long id);
-    public Cliente findBycorreo(String username);
+
 }

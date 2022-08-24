@@ -32,10 +32,4 @@ public class ClienteService implements IClienteService{
     public void deleteCliente(long idcliente) {
         ClienteRepository.deleteById(idcliente);
     }
-   
-
-    @Override
-    public Cliente findBycorreo(String correo) {
-      return ClienteRepository.findByCorreo(correo);
-    }
 }

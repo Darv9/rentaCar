@@ -47,10 +47,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public SecurityConfig(UserServiceEmpleado userPrincipalDetailsService) {
         this.userDetailsService = userPrincipalDetailsService;
     }
+    
     @Override
     protected void configure(AuthenticationManagerBuilder auth) {
         auth.authenticationProvider(authenticationProvider());
     }
+    
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
