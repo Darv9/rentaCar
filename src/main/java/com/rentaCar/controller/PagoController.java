@@ -42,17 +42,17 @@ public class PagoController {
     }
 
     @GetMapping("/editpago/{idPago}")
-    public String editarPago(@PathVariable("idPago") Long idPago, Model model) {
+    public String editarPago(@PathVariable("idpago") Long idpago, Model model) {
         List<Pago> listPago = pagoService.listPago();
-        Pago pago = pagoService.getPagoById(idPago);
+        Pago pago = pagoService.getPagoById(idpago);
         model.addAttribute("pago", pago);
         model.addAttribute("pagos", listPago);
         return "crearPago";
     }
 
     @GetMapping("/deletePago/{idPago}")
-    public String delete(@PathVariable("idPago") Long idPago) {
-        pagoService.delete(idPago);
+    public String delete(@PathVariable("idPago") Long idpago) {
+        pagoService.delete(idpago);
         return "redirect:/detallePago";
     }
 

@@ -33,13 +33,13 @@ public class PagoService implements IPagoService{
     }
 
     @Override
-    public void delete(Long idPago) {
-        pagoRepository.deleteById(idPago);
+    public void delete(Long idpago) {
+        pagoRepository.deleteById(idpago);
     }
 
     @Override
-    public Pago getPagoById(Long idPago) {
-        return pagoRepository.findById(idPago).orElse(null);
+    public Pago getPagoById(Long idpago) {
+        return pagoRepository.findById(idpago).orElse(null);
     }
 
     @Override

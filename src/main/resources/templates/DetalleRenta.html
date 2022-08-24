@@ -15,9 +15,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <thead class = "thead-dark">
                 <tr>
                      <th scope="col">Id</th>
-                    <th th:text = "#{detallerenta.detalles}" ></th>
-                    <th th:text = "#{detallerenta.idvehiculo}"> </th>
-                    <th th:text = "#{detallerenta.cantvehiculos}"></th>
+                    <th th:text = "#{detallerenta.cantvehiculo}"></th>
                     <th th:text = "#{detallerenta.diasrenta}"></th>
                     <th th:text = "#{detallerenta.preveuni}"> </th>
                     <th th:text = "#{detallerenta.preciorenta}"> </th>
@@ -31,12 +29,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <th:block th:each="user : ${detalleRenta}">
                 <tr>
                     <td th:text="${user.getIdrenta}"></td>
-                    <td th:text="${user.getIdvehiculo}"></td>
                     <td th:text="${user.getCantvehiculos}"></td>
                     <td th:text="${user.getDiasrenta}"></td>
                     <td th:text="${user.getPreciovehiculo}"></td>
                     <td th:text="${user.getPreciorenta}"></td>
-                    <td th:text="${user.getProvincia}"></td>
+                    <td th:text="${user.getProvincia.getProvincia}"></td>
                     <td>
                         <a th:href="@{/editdetalleRenta/{idrenta}(idrenta=${user.getIdrenta})}">Edit</a>
                     </td>

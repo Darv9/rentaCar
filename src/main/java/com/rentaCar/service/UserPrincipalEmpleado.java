@@ -29,13 +29,13 @@ public class UserPrincipalEmpleado implements UserDetails{
        List<GrantedAuthority> authorities= new ArrayList<>();
        
        // Extract list of permissions(name)
-      this.empleado.getPermissionList().forEach(p->{
+      this.empleado.getPermissionList().forEach(p -> {
         GrantedAuthority authority= new SimpleGrantedAuthority(p);
         authorities.add(authority);
     });
     
-    this.empleado.getRoleList().forEach(r->{
-        GrantedAuthority authority= new SimpleGrantedAuthority("ROLE_"+ r);
+    this.empleado.getRoleList().forEach(r -> {
+        GrantedAuthority authority= new SimpleGrantedAuthority("ROLE_" + r);
         authorities.add(authority);
     });
     return authorities;

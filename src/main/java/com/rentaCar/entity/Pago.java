@@ -21,7 +21,7 @@ public class Pago implements Serializable {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private int idPago;
+    private int idpago;
     private int id;
     private char fecha;
     private int numeroTarjeta;
@@ -29,13 +29,15 @@ public class Pago implements Serializable {
     private int monto;
     private int idrenta;
 
-    public int getIdPago() {
-        return idPago;
+    public int getIdpago() {
+        return idpago;
     }
 
-    public void setIdPago(int idPago) {
-        this.idPago = idPago;
+    public void setIdpago(int idpago) {
+        this.idpago = idpago;
     }
+
+ 
 
     public int getId() {
         return id;

@@ -16,9 +16,9 @@ public interface IPagoService {
 
     public void savePago(Pago pago);
 
-    public void delete(Long idPago);
+    public void delete(Long idpago);
 
-    public Pago getPagoById(Long idPago);
+    public Pago getPagoById(Long idpago);
 
     public List<Pago> getAllPago();
     
