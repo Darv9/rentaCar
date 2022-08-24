@@ -56,7 +56,7 @@ public class VehiculoController {
     @RequestMapping(value = "/deleteVehiculo/{idvehiculo}", method=RequestMethod.DELETE)
     public String deleteVehiculo(@PathVariable("idvehiculo") Long id ) {
         vehiculoService.deletevehiculo(id);
-        return "redirect:/catalogoIndex";
+        return "redirect:/rentaIndex";
     }
     
     @GetMapping("/sparkIndex")
@@ -82,6 +82,11 @@ public class VehiculoController {
     @GetMapping("/catalogoIndex")
     public String Catalogo(){
         return "catalogo";
+    }
+    
+    @GetMapping("/rentaIndex")
+    public String Renta(){
+        return "renta";
     }
     
 }
