@@ -8,7 +8,7 @@
         <table class = "table table-secondary table-striped table-captiontop">
             <thead class = "thead-dark">
                 <tr>
-                    <th scope="col">Id </th>
+                    <th scope="col">Id Cliente </th>
                     <th th:text = "#{cliente.nombre}" ></th>
                     <th th:text = "#{cliente.apellidos}"> </th>
                     <th th:text = "#{cliente.apellidos}"></th>
@@ -23,7 +23,7 @@
             <tbody>   
             <th:block th:each="user : ${clientes}">
                 <tr>
-                    <td th:text="${user.getId}"></td>
+                    <td th:text="${user.getIdCliente}"></td>
                     <td th:text="${user.getNombre}"></td>
                     <td th:text="${user.getApellido1}"></td>
                     <td th:text="${user.getApellido2}"></td>

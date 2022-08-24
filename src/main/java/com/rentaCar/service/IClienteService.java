@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface IClienteService {
     public List<Cliente> getAllCliente();
-    public Cliente getClienteById(long idcliente);
+    public Cliente getClienteById(long idCliente);
     public void saveCliente(Cliente cliente);
     public void deleteCliente(long idcliente);
 

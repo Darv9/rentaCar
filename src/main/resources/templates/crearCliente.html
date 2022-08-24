@@ -4,11 +4,11 @@
     <head th:replace="plantilla/template::head"></head>
     
     <body class="body" style="background: linear-gradient(180deg, #FFFFFF, #A6A492);">
-        <form th:object = "${cliente}"
+        <form th:object = "${clientes}"
               th:action = "@{/saveCliente}"
               method='POST'
               >
-            <input type="hidden" th:field="*{id}">
+            <input type="hidden" th:field="*{idcliente}">
             <div class="row mb-3">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Nombre</label>
                 <div class="col-sm-10">
