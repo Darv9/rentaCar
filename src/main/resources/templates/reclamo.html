@@ -7,10 +7,10 @@
         <table class = "table table-secondary table-striped table-captiontop">
             <thead class = "thead-dark">
                 <tr>
-                    <th scope="col"th:text = "#{articulo.activo}"> </th>
-                    <th scope="col">Id Cliente </th>
-                    <th scope="col">Id Vehiculo</th>
-                    <th scope="col">Eliminar </th> 
+                    <th scope="col" th:text = "#{articulo.activo}"></th>
+                    <th scope="col" th:text = "#{plantilla.clientes}">Id</th>
+                    <th scope="col" th:text = "#{plantilla.vehiculo}">Id</th>
+                    <th scope="col" th:text = "#{accion.eliminar}"></th> 
                 </tr>
             </thead> 
             <tbody>   
@@ -20,13 +20,13 @@
                     <td th:text="${user.getIdcliente}"></td>
                     <td th:text="${user.getIdvehiculo}"></td>
                     <td>
-                        <a th:href="@{/deletereclamo/{idreclamo}(idreclamo=${user.getIdreclamo})}">Delete</a>
+                        <a th:href="@{/deletereclamo/{idreclamo}(idreclamo=${user.getIdreclamo})}"></a>
                     </td>
                 </tr>
             </th:block>
         </tbody>
     </table>
-    <a class="btn btn-primary" href="/reclamoN" role="button" th:text = "#{accion.agregar}"></a>
+    <a class="btn btn-primary" href="/reclamoN" role="button" th:text = "#{accion.agregar}" th:text = "#{accion.eliminar}"></a>
     <footer th:replace="plantilla/template::footer"></footer>
 </body>
 </html>

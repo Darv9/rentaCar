@@ -20,25 +20,25 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 </div>
             </div>
             <div class="row mb-3">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Id Cliente</label>
+                <label for="inputPassword3" class="col-sm-2 col-form-label" th:text = "#{plantilla.clientes}"></label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="inputPassword3" th:field="*{idcliente}">
                 </div>
             </div>
             <div class="row mb-3">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Id Vehiculo</label>
+                <label for="inputPassword3" class="col-sm-2 col-form-label" th:text = "#{plantilla.vehiculo}"></label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="inputPassword3" th:field="*{idvehiculo}">
                 </div>
             </div>
             <div class="row mb-3">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Fecha de Reclamo</label>
+                <label for="inputPassword3" class="col-sm-2 col-form-label"th:text = "#{plantilla.vehiculo.año}"></label>
                 <div class="col-sm-10">
                     <input type="date" class="form-control" id="inputPassword3" th:field="*{fechareclamo}">
                 </div>
             </div>
             <div class="row mb-3">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Descripción de Reclamo</label>
+                <label for="inputPassword3" class="col-sm-2 col-form-label" th:text = "#{plantilla.reclamo}"></label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="inputPassword3" th:field="*{descripcionreclamo}">
                 </div>
