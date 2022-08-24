@@ -19,8 +19,8 @@ public class ClienteService implements IClienteService{
     }
 
     @Override
-    public Cliente getClienteById(long id) {
-        return ClienteRepository.findById(id).orElse(null);
+    public Cliente getClienteById(long idcliente) {
+        return ClienteRepository.findById(idcliente).orElse(null);
     }
 
     @Override
