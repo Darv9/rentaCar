@@ -6,62 +6,63 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 <html xmlns:th="http://www.thymeleaf.org">
     <head th:replace="plantilla/template::head"></head>
     <body style = "height: 100vh ;background: linear-gradient(180deg, #FFFFFF, #A6A492);">
-        <div class='container'>
-            <div class = 'navbar' style = " height:18vh;
-                 width:100%;
-                 display:flex;
-                 background-color: #0A0C26;"> 
-                <a href="index.html"><img style = " width: 160px;
-                                          cursor: pointer"; src="images/logo.png" class ='logo' alt="Este es el logo del rentacar"/></a>
-                <nav style = "flex:1;
-                     padding-left: 60px;">
-                    <ul>                         
-                        <li style = "display:inline-block;
-                            list-style: none;
-                            margin: 0px 20px;
-                            font-weight: bold;
-                            color: #FFFFFF;"> <a href="index.html">Home</a></li>
-                        <li style = "display:inline-block;
-                            list-style: none;
-                            margin: 0px 20px;
-                            font-weight: bold;
-                            color: #FFFFFF;"> <a href="catalogo.html">Flota y Tarifas</a> </li>
-                        <li style = "display:inline-block;
-                            list-style: none;
-                            margin: 0px 20px;
-                            font-weight: bold;
-                            color: #FFFFFF;"> <a href="booking.html">Reserva</a> </li>
-                        <li style = "display:inline-block;
-                            list-style: none;
-                            margin: 0px 20px;
-                            font-weight: bold;
-                            color: #FFFFFF;"> <a href="renting.html">Renting</a> </li>
-                        <li style = "display:inline-block;
-                            list-style: none;
-                            margin: 0px 20px;
-                            font-weight: bold;
-                            color: #FFFFFF;"> <a href="contacto.html">Contacto</a></li>
-                        <li style = "display:inline-block;
-                            list-style: none;
-                            margin: 0px 20px;
-                            font-weight: bold;
-                            color: #FFFFFF;"> <a href="loginProyecto.html">Login</a> </li>
-                    </ul>
-                </nav>
-            </div> 
-            <div class = 'info'>
-                <h1>Suzuki Vitara 2020</h1>
-                <h2>Costo alquiler por día: 64 000</h2>
-                <p>Suzuki Vitara, un automovil 4x4 diseñado para cumplir y sobresalir en las necesidades más basicas esperadas de un vehículo de tipo familiar, de un tamano mas grande, por 
-                    el precio de 64 000 colones diarios, usted podría obtener el benefecio de uso de este vehículo con todos 
-                    <br> los seguros necesarios para su protección como pasajero y cliente.</p>
-                <p>Carro de 7 campos <br> Costo de alquiler: 64 000 por dia <br></p>
-                <iframe width="1280" height="330" src="https://www.youtube.com/embed/zT8eO0tCySo" title="The NEW VITARA TVC ad" frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="d-grid gap-2">
-                <button class="btn btn-primary" type="button"><a href="th:href=@{/deleteVehiculo/{idvehiculo}(idvehiculo=1)}" th:text = "#{accion.rentar}" style="color: white"></a></button>
-            </div>
+        <div class = 'navbar' style = " height:18vh;
+             width:100%;
+             display:flex;
+             background-color: #0A0C26;"> 
+            <a href="index.html"><img style = " width: 160px;
+                                      cursor: pointer"; src="images/logo.png" class ='logo' alt="Este es el logo del rentacar"/></a>
+            <nav style = "flex:1;
+                 padding-left: 60px;">
+                <ul>                         
+                    <li style = "display:inline-block;
+                        list-style: none;
+                        margin: 0px 20px;
+                        font-weight: bold;
+                        color: #FFFFFF;"> <a href="index.html">Home</a></li>
+                    <li style = "display:inline-block;
+                        list-style: none;
+                        margin: 0px 20px;
+                        font-weight: bold;
+                        color: #FFFFFF;"> <a href="catalogo.html">Flota y Tarifas</a> </li>
+                    <li style = "display:inline-block;
+                        list-style: none;
+                        margin: 0px 20px;
+                        font-weight: bold;
+                        color: #FFFFFF;"> <a href="booking.html">Reserva</a> </li>
+                    <li style = "display:inline-block;
+                        list-style: none;
+                        margin: 0px 20px;
+                        font-weight: bold;
+                        color: #FFFFFF;"> <a href="renting.html">Renting</a> </li>
+                    <li style = "display:inline-block;
+                        list-style: none;
+                        margin: 0px 20px;
+                        font-weight: bold;
+                        color: #FFFFFF;"> <a href="contacto.html">Contacto</a></li>
+                    <li style = "display:inline-block;
+                        list-style: none;
+                        margin: 0px 20px;
+                        font-weight: bold;
+                        color: #FFFFFF;"> <a href="loginProyecto.html">Login</a> </li>
+                </ul>
+            </nav>
+        </div> 
+        <div class = 'info'>
+            <h1>Suzuki Vitara 2020</h1>
+            <h2>Costo alquiler por día: 64 000</h2>
+            <p>Suzuki Vitara, un automovil 4x4 diseñado para cumplir y sobresalir en las necesidades más basicas esperadas de un vehículo de tipo familiar, de un tamano mas grande, por 
+                el precio de 64 000 colones diarios, usted podría obtener el benefecio de uso de este vehículo con todos 
+                <br> los seguros necesarios para su protección como pasajero y cliente.</p>
+            <p>Carro de 7 campos <br> Costo de alquiler: 64 000 por dia <br></p>
+            <iframe width="1280" height="330" src="https://www.youtube.com/embed/zT8eO0tCySo" title="The NEW VITARA TVC ad" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div>
+            <form action="#" th:action="@{'/deleteVehiculo/{idvehiculo}'(idvehiculo=1)}" th:method="delete" >
+                <button type="submit" class="btn" th:text = "#{accion.rentar}">
+                </button>
+            </form>
         </div>
         <footer th:replace="plantilla/template::footer"></footer>
     </body>

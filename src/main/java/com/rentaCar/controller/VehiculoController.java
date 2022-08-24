@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 
 
@@ -51,10 +53,10 @@ public class VehiculoController {
         return "redirect:/vehiculo";
     }
     
-    @GetMapping("/deleteVehiculo/{idvehiculo}")
-    public String deleteVehiculo(@PathVariable("idvehiculo") Long id) {
+    @RequestMapping(value = "/deleteVehiculo/{idvehiculo}", method=RequestMethod.DELETE)
+    public String deleteVehiculo(@PathVariable("idvehiculo") Long id ) {
         vehiculoService.deletevehiculo(id);
-        return "renta.html";
+        return "redirect:/catalogoIndex";
     }
     
     @GetMapping("/sparkIndex")
@@ -79,7 +81,7 @@ public class VehiculoController {
     
     @GetMapping("/catalogoIndex")
     public String Catalogo(){
-        return "catalogoIndex";
+        return "catalogo";
     }
     
 }
