@@ -50,11 +50,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </div> 
         <div class = 'info'>
             <h1>Suzuki Vitara 2020</h1>
-            <h2>Costo alquiler por día: 64 000</h2>
+            <h2 th:text = "#{catalogo.precio}"></h2>
+            <h3>64 000</h3>
             <p>Suzuki Vitara, un automovil 4x4 diseñado para cumplir y sobresalir en las necesidades más basicas esperadas de un vehículo de tipo familiar, de un tamano mas grande, por 
                 el precio de 64 000 colones diarios, usted podría obtener el benefecio de uso de este vehículo con todos 
                 <br> los seguros necesarios para su protección como pasajero y cliente.</p>
-            <p>Carro de 7 campos <br> Costo de alquiler: 64 000 por dia <br></p>
+            <p th:text = "#{carro.espacios}"></p>
+            <p>7</p>
             <iframe width="1280" height="330" src="https://www.youtube.com/embed/zT8eO0tCySo" title="The NEW VITARA TVC ad" frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
