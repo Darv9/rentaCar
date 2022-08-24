@@ -21,7 +21,6 @@ public class DetalleVenta implements Serializable  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idventa;
-    private int idvehiculo;
     private int cantvehiculosvendidos;
     private int precioventa ;
 
@@ -31,14 +30,6 @@ public class DetalleVenta implements Serializable  {
 
     public void setIdventa(int idventa) {
         this.idventa = idventa;
-    }
-
-    public int getIdvehiculo() {
-        return idvehiculo;
-    }
-
-    public void setIdvehiculo(int idvehiculo) {
-        this.idvehiculo = idvehiculo;
     }
 
     public int getCantvehiculosvendidos() {
