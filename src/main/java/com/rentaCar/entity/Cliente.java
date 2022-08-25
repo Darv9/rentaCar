@@ -14,7 +14,7 @@ import javax.persistence.Table;
 public class Cliente implements Serializable{
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private long idcliente;
+    private long id;
     private String nombre;
     private String apellido1;
     private String apellido2;
@@ -28,12 +28,12 @@ public class Cliente implements Serializable{
     @JoinColumn(name="nacionalidad_id")
     private Nacionalidad nacionalidad;
 
-    public long getIdcliente() {
-        return idcliente;
+    public long getId() {
+        return id;
     }
 
-    public void setIdcliente(long idcliente) {
-        this.idcliente = idcliente;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getNombre() {

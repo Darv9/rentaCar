@@ -46,7 +46,9 @@ public class EmpleadoController {
 
     @GetMapping("/editEmpleado/{idempleado}")
     public String editarVehiculo(@PathVariable("idempleado") Long idempleado, Model model) {
+        List<Nacionalidad> listaNacionalidades = nacionalidadService.listNacionalidad();
         Empleado empleado = empleadoService.getEmpleadoById(idempleado);
+        model.addAttribute("nacionalidades", listaNacionalidades);
         model.addAttribute("empleado", empleado);
         return "crearEmpleado";
     }

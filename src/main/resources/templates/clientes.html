@@ -3,9 +3,7 @@
     <head th:replace="plantilla/template::head"></head>
     <body class="body" style="background: linear-gradient(180deg, #FFFFFF, #A6A492); height: 100vh;">
         <header th:replace="plantilla/template::header"></header>
-        <h1 th:text = "#{plantilla.clientes}"></h1>
         <h1 th:text = "#{cliente.datos}"></h1>
-        <h1 th:text = "${titulo}"></h1>
         <table class = "table table-secondary table-striped table-captiontop">
             <thead class = "thead-dark">
                 <tr>
@@ -24,7 +22,7 @@
             <tbody>   
             <th:block th:each="user : ${clientes}">
                 <tr>
-                    <td th:text="${user.getIdCliente}"></td>
+                    <td th:text="${user.getId}"></td>
                     <td th:text="${user.getNombre}"></td>
                     <td th:text="${user.getApellido1}"></td>
                     <td th:text="${user.getApellido2}"></td>
@@ -33,10 +31,10 @@
                     <td th:text="${user.getDomicilio}"></td>
                     <td th:text="${user.getNacionalidad}"></td>
                     <td>
-                        <a th:href="@{/editCliente/{idcliente}(idcliente=${user.getIdcliente})}" th:text = "#{accion.editar}"></a>
+                        <a th:href="@{/editCliente/{id}(id=${user.getId})}" th:text = "#{accion.editar}"></a>
                     </td>
                     <td>
-                        <a th:href="@{/deleteCliente/{idcliente}(idcliente=${user.getIdcliente})}" th:text = "#{accion.eliminar}"></a>
+                        <a th:href="@{/deleteCliente/{id}(id=${user.getId})}" th:text = "#{accion.eliminar}"></a>
                     </td>
                 </tr>
             </th:block>

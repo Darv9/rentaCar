@@ -45,18 +45,18 @@ public class ClienteController {
         return "redirect:/clientes";
     }
 
-    @GetMapping("/editCliente/{idcliente}")
-    public String editarCliente(@PathVariable("idcliente") Long idcliente, Model model) {
+    @GetMapping("/editCliente/{id}")
+    public String editarCliente(@PathVariable("id") Long id, Model model) {
         List<Nacionalidad> listaNacionalidades = nacionalidadService.listNacionalidad();
-        Cliente cliente = clienteService.getClienteById(idcliente);
+        Cliente cliente = clienteService.getClienteById(id);
         model.addAttribute("cliente", cliente);
         model.addAttribute("nacionalidades", listaNacionalidades);
         return "crearCliente";
     }
     
-    @GetMapping("/deleteCliente/{idcliente}")
-    public String deleteCliente(@PathVariable("idcliente") Long idcliente) {
-        clienteService.deleteCliente(idcliente);
+    @GetMapping("/deleteCliente/{id}")
+    public String deleteCliente(@PathVariable("id") Long id) {
+        clienteService.deleteCliente(id);
         return "redirect:/clientes";
     }
 }

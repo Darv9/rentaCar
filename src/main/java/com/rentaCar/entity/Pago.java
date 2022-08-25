@@ -9,6 +9,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -22,7 +24,12 @@ public class Pago implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int idpago;
-    private int id;
+    
+    @ManyToOne
+    @JoinColumn(name="id")
+    private Cliente idcliente;
+    
+    
     private char fecha;
     private int numeroTarjeta;
     private char fechaExp;
@@ -35,16 +42,6 @@ public class Pago implements Serializable {
 
     public void setIdpago(int idpago) {
         this.idpago = idpago;
-    }
-
- 
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public char getFecha() {
@@ -85,6 +82,14 @@ public class Pago implements Serializable {
 
     public void setIdrenta(int idrenta) {
         this.idrenta = idrenta;
+    }
+
+    public Cliente getIdcliente() {
+        return idcliente;
+    }
+
+    public void setIdcliente(Cliente idcliente) {
+        this.idcliente = idcliente;
     }
 
 }
