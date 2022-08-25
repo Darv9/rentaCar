@@ -49,12 +49,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 </ul>
             </nav>
         </div> 
-        <form th:object = "${pago}"
-              th:action = "@{/savePago}"
-              method='POST'
-              >
-            
-            <input type="hidden" th:field="*{idpago}">
+        <form >
+
+
             <div class="container">
                 <div class="py-5 text-center">
                     <img class="d-block mx-auto mb-4" src="images\logo_1.png" alt="logo" width="72" height="72">
@@ -102,14 +99,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 <strong>$75</strong>
                             </li>
                         </ul>
-                        <form class="card p-2">
+                        <form th:object = "${pago}"
+                              th:action = "@{/savePago}"
+                              method='POST'>
                             <div class="input-group">
                                 <input type="text" class="form-control" placeholder="Codigo Promocional">
                                 <div class="input-group-append">
                                     <button type="submit" class="btn btn-secondary">Canjear</button>
                                 </div>
                             </div>
-                        </form>
+
                     </div>
                     <div class="col-md-8 order-md-1">
                         <h4 class="mb-3">DETALLES DEL CLIENTE </h4>
@@ -117,7 +116,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="firstName">Nombre</label>
-                                    <input type="text" class="form-control" id="Nombre" placeholder="" value="" required="">
+                                    <input type="text" class="form-control" id="Nombre" placeholder="" value="" required="" >
                                     <div class="invalid-feedback"> Campo Obligatorio. </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
@@ -132,7 +131,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">@</span>
                                     </div>
-                                    <input type="text" class="form-control" id="email" placeholder="Email" required="">
+                                    <input type="text" class="form-control" id="email" placeholder="Email" required="" >
                                     <div class="invalid-feedback" style="width: 100%;"> Campo Obligatorio. </div>
                                 </div>
                             </div>
@@ -192,6 +191,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 <label class="custom-control-label" for="save-info">Me gustaría recibir ofertas exclusivas y promociones </label>
                             </div>
                             <hr class="mb-4">
+
                             <h4 class="mb-3">DETALLES DE PAGO</h4>
                             <div class="d-block my-3">
                                 <div class="custom-control custom-radio">
@@ -216,39 +216,43 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="cc-number">Numero de Tarjeta</label>
-                                    <input type="number" class="form-control" id="cc-number" placeholder="" required="">
-                                    <div class="invalid-feedback"> Campo Obligatorio. </div>
-                                </div>
+                                    <input type="number" class="form-control" id="cc-number" placeholder="" required="" th:field="*{numerotarjeta}>
+                                           <div class="invalid-feedback"> Campo Obligatorio. </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-3 mb-3">
-                                    <label for="cc-expiration">Expiración</label>
-                                    <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
-                                    <div class="invalid-feedback"> Campo Obligatorio. </div>
-                                </div>
-                                <div class="col-md-3 mb-3">
-                                    <label for="cc-cvv">CVV</label>
-                                    <input type="number" class="form-control" id="cc-cvv" placeholder="" required="">
-                                    <div class="invalid-feedback"> Campo Obligatorio. </div>
-                                </div>
-                            </div>
-                            <hr class="mb-4">
-                            <a class="btn btn-primary" href="/catalogoIndex" role="button">Confirmar Reservación</a>
-                        </form>
-                        </form>
-                    </div> 
-                </div>
-                <footer class="my-5 pt-5 text-muted text-center text-small">
-                    <p class="mb-1">© 2022 Rentthecarg7</p>
-                    <ul class="list-inline">
-                        <li class="list-inline-item"><a href="#">Privacy</a></li>
-                        <li class="list-inline-item"><a href="#">Terms</a></li>
-                        <li class="list-inline-item"><a href="#">Support</a></li>
-                    </ul>
-                </footer>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <label for="cc-expiration">Expiración</label>
+                            <input type="text" class="form-control" id="cc-expiration" placeholder="" required="" th:field="*{fechaexp}">
+                            <div class="invalid-feedback"> Campo Obligatorio. </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="cc-cvv">CVV</label>
+                            <input type="number" class="form-control" id="cc-cvv" placeholder="" required="">
+                            <div class="invalid-feedback"> Campo Obligatorio. </div>
+                        </div>
+                    </div>
+                    <hr class="mb-4">
+                    
+                    </form>
+                    </form>
+
+                </div> 
             </div>
-            <footer th:replace="plantilla/template::footer"></footer>
-    </body>
+        </form>
+
+        <a class="btn btn-primary" href="/catalogoIndex" role="button">Confirmar Reservación</a>
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">© 2022 Rentthecarg7</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Privacy</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Support</a></li>
+            </ul>
+        </footer>
+    </div>
+    <footer th:replace="plantilla/template::footer"></footer>
+</body>
 </html>
 
 

@@ -24,13 +24,6 @@ public class Pago implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int idpago;
-    
-    @ManyToOne
-    @JoinColumn(name="id")
-    private Cliente idcliente;
-    
-    
-    private char fecha;
     private int numeroTarjeta;
     private char fechaExp;
     private int monto;
@@ -42,14 +35,6 @@ public class Pago implements Serializable {
 
     public void setIdpago(int idpago) {
         this.idpago = idpago;
-    }
-
-    public char getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(char fecha) {
-        this.fecha = fecha;
     }
 
     public int getNumeroTarjeta() {
@@ -84,12 +69,6 @@ public class Pago implements Serializable {
         this.idrenta = idrenta;
     }
 
-    public Cliente getIdcliente() {
-        return idcliente;
-    }
-
-    public void setIdcliente(Cliente idcliente) {
-        this.idcliente = idcliente;
-    }
+   
 
 }
