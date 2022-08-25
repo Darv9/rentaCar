@@ -3,7 +3,8 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://thymeleaft.org/extras/spring-security">
     <head th:fragment="head">
         <title>Rent A Car</title>
         <meta charset="UTF-8">
@@ -46,7 +47,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 <a class="nav-link disabled" href="/login">Log out</a>
                             </li>
                         </ul>
-                </div>
+                    </div>
             </nav>
         </header>
         <footer th:fragment="footer" class="fixed-bottom";>

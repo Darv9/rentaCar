@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://thymeleaft.org/extras/spring-security">
     <head th:replace="plantilla/template::head"></head>
 
     <body class="body" style="background: linear-gradient(180deg, #FFFFFF, #A6A492); height: 100vh;">
         <header th:replace="plantilla/template::header"></header>
 
-        
+
         <h1 th:text = "${titulo}"></h1>
         <h1 th:text = "#{nacionalidad.nombre}"></h1>
         <table class = "table table-secondary table-striped table-captiontop">
@@ -16,7 +16,7 @@
                     <th th:text = "#{nacionalidad.nombrenacionalidad}"> </th>
                     <th th:text = "#{accion.editar}"></th>
                     <th th:text = "#{accion.eliminar}"> </th>
-                  
+
                 </tr>
             </thead> 
             <tbody>   

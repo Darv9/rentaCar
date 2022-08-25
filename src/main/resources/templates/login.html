@@ -3,7 +3,8 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://thymeleaft.org/extras/spring-security">
     <head th:replace="plantilla/template::head"></head>   
     <body style = "align-items: center; justify-content: center; height: 75vh; font-family: Arial,Helvetica, sans-serif; background:#0B1D4D;">  
         <a class="py-5 text-center"> <img class="d-block mx-auto mb-4" src="images /logo_1.png" alt="logo" width="150" height="150"></a>
@@ -43,14 +44,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                     <button type="submit" class="btn btn-success"th:text = "#{login.login}"></button>                              
                                 </div>
                                    <a class="btn btn-primary" href="/index.html" role="button" th:text = "#{botton.entrar}"></a>
-                              
                             </fieldset>                       
                         </form>                   
                     </div>               
                 </div>           
             </div>        
         </div>
-      
         <footer th:replace="plantilla/template::footer"></footer>
     </body>
 </html>

@@ -3,14 +3,15 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://thymeleaft.org/extras/spring-security">
 
-    
+
     <head th:replace="plantilla/template::head"></head>
 
     <body class="body" style="background: linear-gradient(180deg, #FFFFFF, #A6A492); height: 100vh;">
         <header th:replace="plantilla/template::header"></header>
-           <h1 th:text = "#{pago.tabla}"></h1>
+        <h1 th:text = "#{pago.tabla}"></h1>
         <table class = "table table-secondary table-striped table-captiontop">
             <thead class = "thead-dark">
                 <tr>
@@ -29,7 +30,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <td th:text="${user.getIdPago}"></td>   
                     <td th:text="${user.getFechaexp}"></td>
                     <td th:text="${user.getNumerotarjeta}"></td>
-                    
+
                     <td>
                         <a th:href="@{/editdetallePago/{idpago}(idpago=${user.getIdrenta})}">Edit</a>
                     </td>
