@@ -9,7 +9,7 @@
                 <tr>
                     <th scope="col" th:text = "#{articulo.activo}"></th>
                     <th scope="col" th:text = "#{plantilla.clientes}">Id</th>
-                    <th scope="col" th:text = "#{plantilla.vehiculo}">Id</th>
+                    <th scope="col" th:text = "#{plantilla.vehiculos}">Id</th>
                     <th scope="col" th:text = "#{accion.eliminar}"></th> 
                 </tr>
             </thead> 
@@ -20,7 +20,7 @@
                     <td th:text="${user.getIdcliente}"></td>
                     <td th:text="${user.getIdvehiculo}"></td>
                     <td>
-                        <a th:href="@{/deletereclamo/{idreclamo}(idreclamo=${user.getIdreclamo})}"></a>
+                        <a th:href="@{/deletereclamo/{idreclamo}(idreclamo=${user.getIdreclamo})}" th:text = "#{accion.eliminar}"></a>
                     </td>
                 </tr>
             </th:block>

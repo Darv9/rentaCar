@@ -34,10 +34,8 @@ public class PagoController {
     }
     
     @GetMapping("/pagoN")
-    public String agregarPago (Model model){
-        List<Pago> listPago = pagoService.listPago();
+    public String agregarPago (Model model){   
         model.addAttribute("pago",new Pago());
-        model.addAttribute("pagos", listPago);
         return "crearPago";
     }
 

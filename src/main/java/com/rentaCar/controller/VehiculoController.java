@@ -4,6 +4,7 @@
  */
 package com.rentaCar.controller;
 
+import com.rentaCar.entity.Pago;
 import com.rentaCar.entity.Vehiculo;
 import com.rentaCar.service.IVehiculoService;
 import java.util.List;
@@ -17,12 +18,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-
-
-
 @Controller
 public class VehiculoController {
-   
+
     @Autowired
     private IVehiculoService vehiculoService;
 
@@ -33,10 +31,10 @@ public class VehiculoController {
         model.addAttribute("vehiculo", listaVehiculo);
         return "vehiculo";
     }
-    
+
     @GetMapping("/vehiculoN")
-    public String agregarVehiculo (Model model){
-        model.addAttribute("vehiculo",new Vehiculo());
+    public String agregarVehiculo(Model model) {
+        model.addAttribute("vehiculo", new Vehiculo());
         return "crearVehiculo";
     }
 
@@ -52,42 +50,47 @@ public class VehiculoController {
         vehiculoService.saveVehiculo(vehiculo);
         return "redirect:/vehiculo";
     }
-    
-    @RequestMapping(value = "/deleteVehiculo/{idvehiculo}", method=RequestMethod.DELETE)
-    public String deleteVehiculo(@PathVariable("idvehiculo") Long id ) {
+
+    @RequestMapping(value = "/deleteVehiculo/{idvehiculo}", method = RequestMethod.DELETE)
+    public String deleteVehiculo(@PathVariable("idvehiculo") Long id) {
         vehiculoService.deletevehiculo(id);
-        return "redirect:/rentaIndex";
+        return "redirect:/pagoN";
     }
-    
+
+    @GetMapping("/pagoN")
+    public String agregarPago(Model model) {
+        model.addAttribute("pago", new Pago());
+        return "crearPago";
+    }
+
     @GetMapping("/sparkIndex")
-    public String Spark(){
+    public String Spark() {
         return "sparkIndex";
     }
-    
+
     @GetMapping("/vitaraIndex")
-    public String Vitara(){
+    public String Vitara() {
         return "vitaraIndex";
     }
-    
+
     @GetMapping("/amarokIndex")
-    public String Amarok(){
+    public String Amarok() {
         return "amarokIndex";
     }
-    
+
     @GetMapping("/accentIndex")
-    public String Accent(){
+    public String Accent() {
         return "accentIndex";
     }
-    
+
     @GetMapping("/catalogoIndex")
-    public String Catalogo(){
+    public String Catalogo() {
         return "catalogo";
     }
-    
+
     @GetMapping("/rentaIndex")
-    public String Renta(){
+    public String Renta() {
         return "renta";
     }
-    
-}
 
+}
