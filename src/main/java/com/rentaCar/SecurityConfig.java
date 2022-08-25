@@ -20,6 +20,7 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
  *
  * @author Daniel
  */
+
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -63,6 +64,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
-                .loginPage("/login").permitAll().defaultSuccessUrl("/clientes",true);
+                .loginPage("/login").permitAll().defaultSuccessUrl("/IndexAdmin",true);
     }
 }
