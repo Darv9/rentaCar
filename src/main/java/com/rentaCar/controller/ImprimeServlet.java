@@ -44,7 +44,7 @@ import static org.hibernate.internal.HEMLogging.logger;
 @WebServlet(name = "Reporte", urlPatterns = {"/Reporte1"})
 public class ImprimeServlet extends HttpServlet {
 
-    String dbName = "jdbc:mysql://localhost:3306/rrentthecarg7?serverTimezone=UTC";
+    String dbName = "jdbc:mysql://localhost:3306/rentthecarg7?serverTimezone=UTC";
     String dbDriver = "com.mysql.cj.jdbc.Driver";
     String userName = "root";
     String userPassword = "Diego1820";
