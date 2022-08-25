@@ -15,32 +15,32 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
               >
             <input type="hidden" th:field="*{idrenta}">
             <div class="row mb-3">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Cantidad Vehiculos</label>
+                <label for="inputPassword3" class="col-sm-2 col-form-label"th:text = "#{detallerenta.cantvehiculo}"></label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="inputPassword3" th:field="*{cantvehiculos}">
                 </div>
             </div>
             <div class="row mb-3">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Dias Renta</label>
+                <label for="inputPassword3" class="col-sm-2 col-form-label"th:text = "#{detallerenta.diasrenta}"></label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="inputPassword3" th:field="*{diasrenta}">
                 </div>
             </div>
             <div class="row mb-3">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Precio Vehiculo</label>
+                <label for="inputPassword3" class="col-sm-2 col-form-label"th:text = "#{detallerenta.cantvehiculo}"></label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="inputPassword3" th:field="*{preciovehiculo}">
                 </div>
             </div>
             <div class="row mb-3">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Precio Renta</label>
+                <label for="inputPassword3" class="col-sm-2 col-form-label"th:text = "#{detallerenta.preciorenta}"></label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="inputPassword3" th:field="*{preciorenta}">
                 </div>
             </div>
 
             <div class="form-group mb-3 row">
-                <label for="inputState" class="form-label">Tienda</label>
+                <label for="inputState" class="form-label"th:text = "#{detallerenta.provincia}"></label>
                 <select th:field="*{provincia}" class="form-control form-control-sm col-md-6" id="provincias">
                     <option th:each="x:${provincias}"
                             th:value="${x.idprovincias}"
