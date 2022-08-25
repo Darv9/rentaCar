@@ -62,8 +62,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 </div>
                 <div class="card mb-3" style="background: linear-gradient(180deg, #FFFFFF, #A6A492);">
                     <ul class="list-group list-group-horizontal">
-                        <li class="list-group-item"><a href="/catalogoIndex"th:text = "#{aplicacion.catalogo}"></a></li>
-                        <li class="list-group-item"><a href="contacto.html"th:text = "#{aplicacion.contacto}"></a></li>
+                        
                         <li class="list-group-item"><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
                                                        th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}">ES</a></li>
                         <li class="list-group-item"><a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"

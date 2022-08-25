@@ -7,7 +7,7 @@
         <table class = "table table-secondary table-striped table-captiontop">
             <thead class = "thead-dark">
                 <tr>
-                    <th scope="col">Id Cliente </th>
+                    <th scope= "col">Id Cliente </th>
                     <th th:text = "#{cliente.nombre}" ></th>
                     <th th:text = "#{cliente.apellidos}"> </th>
                     <th th:text = "#{cliente.apellidos}"></th>
@@ -40,6 +40,7 @@
             </th:block>
         </tbody>
     </table>
+        
     <a class="btn btn-primary" href="/clienteN" role="button" th:text = "#{accion.agregar}"></a>
     <footer th:replace="plantilla/template::footer"></footer>
 </body> 

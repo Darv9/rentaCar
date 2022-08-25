@@ -5,6 +5,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 -->
 <html xmlns:th="http://www.thymeleaf.org">
 
+    
     <head th:replace="plantilla/template::head"></head>
 
     <body class="body" style="background: linear-gradient(180deg, #FFFFFF, #A6A492); height: 100vh;">
@@ -13,7 +14,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <table class = "table table-secondary table-striped table-captiontop">
             <thead class = "thead-dark">
                 <tr>
-                     <th scope="col">Id</th>
+                     <th scope= "col">Id</th>
                     <th th:text = "#{detallerenta.cantvehiculo}"></th>
                     <th th:text = "#{detallerenta.diasrenta}"></th>
                     <th th:text = "#{detallerenta.preveuni}"> </th>

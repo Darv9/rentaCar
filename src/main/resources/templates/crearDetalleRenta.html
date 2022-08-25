@@ -9,7 +9,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
     <body class="body" style="background: linear-gradient(180deg, #FFFFFF, #A6A492); height: 100vh";>
         <form th:object = "${detalleRenta}"
-              th:action = "@{/saveDetalleRenta}"
+              
+              th:action =  "@{/saveDetalleRenta}"
               method='POST'
               >
             <input type="hidden" th:field="*{idrenta}">

@@ -6,6 +6,7 @@
     <body class="body" style="background: linear-gradient(180deg, #FFFFFF, #A6A492); height: 100vh;">
         <header th:replace="plantilla/template::header"></header>
 
+        
         <h1 th:text = "${titulo}"></h1>
         <h1 th:text = "#{nacionalidad.nombre}"></h1>
         <table class = "table table-secondary table-striped table-captiontop">
@@ -19,7 +20,7 @@
                 </tr>
             </thead> 
             <tbody>   
-            <th:block th:each="user : ${nacionalidad}">
+            <th:block th:each= "user : ${nacionalidad}">
                 <tr>
                     <td th:text="${user.getIdNacionalidad}"></td>
                     <td th:text="${user.getNombreNacionalidad}"></td>

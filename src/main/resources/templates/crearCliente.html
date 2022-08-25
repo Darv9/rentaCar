@@ -8,7 +8,7 @@
               th:action = "@{/saveCliente}"
               method='POST'
               >
-            <input type="hidden" th:field="*{id}">
+            <input type= "hidden" th:field="*{id}">
             <div class="row mb-3">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Id Empleado</label>
                 <div class="col-sm-10">
@@ -61,7 +61,8 @@
                 </select>
             </div>
             <button type="submit" class="btn btn-primary" value="Guardar">Submit</button>
-        </form>
-        <footer th:replace="plantilla/template::footer"></footer>
+        </form> 
+        
+        <footer   th:replace="plantilla/template::footer"></footer>
     </body>
 </html>
