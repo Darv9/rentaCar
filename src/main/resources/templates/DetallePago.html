@@ -16,12 +16,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <tr>
                     <th scope= "col">Id</th>
                     <th th:text = "#{detallepago.idpago}"></th>
-                    <th th:text = "#{detallepago.fecha}"></th>
                     <th th:text = "#{detallepago.fechaexp}"> </th>
-                    <th th:text = "#{detallepago.id}"> </th>
-                    <th th:text = "#{detallepago.monto}"> </th>
-                    <th th:text = "#{detallepago.numerotarjeta}"></th>
-                    <th th:text = "#{detallepago.idrenta}"></th>
+                    <th th:text = "#{detallepago.numerotarjeta}"></th>         
                     <th th:text = "#{accion.editar}"></th>
                     <th th:text = "#{accion.eliminar}"> </th>
 
@@ -30,13 +26,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <tbody>   
             <th:block th:each="user : ${detallePago}">
                 <tr>
-                    <td th:text="${user.getIdPago}"></td>
-                    <td th:text="${user.getFecha}"></td>
+                    <td th:text="${user.getIdPago}"></td>   
                     <td th:text="${user.getFechaexp}"></td>
-                    <td th:text="${user.getId}"></td>
-                    <td th:text="${user.getMonto}"></td>
                     <td th:text="${user.getNumerotarjeta}"></td>
-                    <td th:text="${user.getIdrenta}"></td>
+                    
                     <td>
                         <a th:href="@{/editdetallePago/{idpago}(idpago=${user.getIdrenta})}">Edit</a>
                     </td>

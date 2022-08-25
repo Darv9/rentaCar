@@ -6,7 +6,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 <html xmlns:th="http://www.thymeleaf.org">
 
     <head th:replace="plantilla/template::head"></head>
-    <body class="body" style="background: linear-gradient(180deg, #FFFFFF, #A6A492); height: 180vh";>
+    <body class="body" style="background: linear-gradient(180deg, #FFFFFF, #A6A492); height: 200vh";>
         <div class = 'navbar' style = " height:18vh;
              width:100%;
              display:flex;
@@ -25,12 +25,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         list-style: none;
                         margin: 0px 20px;
                         font-weight: bold;
-                        color: #FFFFFF;"> <a href="catalogo.html">Flota y Tarifas</a> </li>
-                    <li style = "display:inline-block;
-                        list-style: none;
-                        margin: 0px 20px;
-                        font-weight: bold;
-                        color: #FFFFFF;"> <a href="booking.html">Reserva</a> </li>
+                        color: #FFFFFF;"> <a href="/catalogoIndex">Flota y Tarifas</a> </li>
                     <li style = "display:inline-block;
                         list-style: none;
                         margin: 0px 20px;
@@ -54,7 +49,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
             <div class="container">
                 <div class="py-5 text-center">
-                    <img class="d-block mx-auto mb-4" src="images\logo_1.png" alt="logo" width="72" height="72">
+                    <img class="d-block mx-auto mb-4" src="images\logo_1.png" alt="logo" width="150" height="150">
                     <h2>Pago de Reservación</h2>
                     <p class="lead">Cambios y cancelación gratuita <br>
                         Haz tu reserva con total tranquilidad. <br> ¡En Rentthecarg7 puede cambiar o cancelar su alquiler sin cargo!.</p>
@@ -216,14 +211,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="cc-number">Numero de Tarjeta</label>
-                                    <input type="number" class="form-control" id="cc-number" placeholder="" required="" th:field="*{numerotarjeta}>
+                                    <input type="number" class="form-control" id="cc-number" placeholder="" required="">
                                            <div class="invalid-feedback"> Campo Obligatorio. </div>
                             </div>
                     </div>
                     <div class="row">
                         <div class="col-md-3 mb-3">
                             <label for="cc-expiration">Expiración</label>
-                            <input type="text" class="form-control" id="cc-expiration" placeholder="" required="" th:field="*{fechaexp}">
+                            <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
                             <div class="invalid-feedback"> Campo Obligatorio. </div>
                         </div>
                         <div class="col-md-3 mb-3">
