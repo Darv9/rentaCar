@@ -19,6 +19,7 @@ import java.sql.SQLException;
 import java.util.Map;
 import java.util.function.Supplier;
 import java.util.logging.Logger;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -40,6 +41,7 @@ import static org.hibernate.internal.HEMLogging.logger;
  *
  * @author Diego Segura Vega
  */
+@WebServlet(name = "Reporte", urlPatterns = {"/Reporte1"})
 public class ImprimeServlet extends HttpServlet {
 
     String dbName = "jdbc:mysql://localhost:3306/rrentthecarg7?serverTimezone=UTC";
@@ -56,7 +58,7 @@ public class ImprimeServlet extends HttpServlet {
             Connection con = DriverManager.getConnection(dbName + dbDataBase, userName, userPassword);               
 
             Map<String, Object> parametros = new java.util.HashMap();
-            InputStream file = getClass().getResourceAsStream("test.jrxml");
+            InputStream file = getClass().getResourceAsStream("invoice.jrxml");
             JasperPrint impresion = null;
             JasperDesign disenio = JRXmlLoader.load(file);
             JasperReport reporte = JasperCompileManager.compileReport(disenio);
