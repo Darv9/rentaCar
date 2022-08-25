@@ -8,6 +8,7 @@ import com.rentaCar.entity.Pago;
 import com.rentaCar.service.IPagoService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -20,8 +21,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
  *
  * @author Jason Quiros
  */
+@Controller
 public class PagoController {
 
+    
     @Autowired
     private IPagoService pagoService;
 

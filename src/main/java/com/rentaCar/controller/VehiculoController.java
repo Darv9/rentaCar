@@ -57,12 +57,6 @@ public class VehiculoController {
         return "redirect:/pagoN";
     }
 
-    @GetMapping("/pagoN")
-    public String agregarPago(Model model) {
-        model.addAttribute("pago", new Pago());
-        return "crearPago";
-    }
-
     @GetMapping("/sparkIndex")
     public String Spark() {
         return "sparkIndex";
@@ -87,7 +81,5 @@ public class VehiculoController {
     public String Catalogo() {
         return "catalogo";
     }
-
-   
 
 }
