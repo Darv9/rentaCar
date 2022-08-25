@@ -88,9 +88,6 @@ public class VehiculoController {
         return "catalogo";
     }
 
-    @GetMapping("/rentaIndex")
-    public String Renta() {
-        return "renta";
-    }
+   
 
 }
