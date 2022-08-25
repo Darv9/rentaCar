@@ -3,22 +3,22 @@
     <head th:replace="plantilla/template::head"></head>
     <body class="body" style="background: linear-gradient(180deg, #FFFFFF, #A6A492); height: 100vh;">
         <header th:replace="plantilla/template::header"></header>
-        <h1 th:text = "${titulo}"> </h1>
+       <h1 th:text = "#{vehiculo.tabla}"></h1>
         <table class = "table table-secondary table-striped table-captiontop">
             <thead class = "thead-dark">
                 <tr>
-                    <th scope="col">Id Vehiculo </th>
-                    <th scope="col">Modelo </th>
-                    <th scope="col">Año</th>
-                    <th scope="col">Color </th> 
-                    <th scope="col">Marca </th>
-                    <th scope="col">Descripción Vehiculo </th>
-                    <th scope="col">Material</th>
-                    <th scope="col">Tipo de Motor </th> 
-                    <th scope="col">Kilometraje </th>
-                    <th scope="col">Cant. Puertas </th>
-                    <th scope="col">Cant. Asientos</th>
-                    <th scope="col">Precio de Renta </th> 
+                    <th th:text = "#{vehiculo.idvehiculo}" ></th>
+                    <th th:text = "#{vehiculo.modelo}" ></th>
+                    <th th:text = "#{vehiculo.año}" ></th>
+                    <th th:text = "#{vehiculo.color}" ></th>
+                    <th th:text = "#{vehiculo.marca}" ></th>
+                    <th th:text = "#{vehiculo.descripcion}" ></th>
+                    <th th:text = "#{vehiculo.material}" ></th>
+                    <th th:text = "#{vehiculo.tipo}" ></th>
+                    <th th:text = "#{vehiculo.kilometraje}" ></th>
+                    <th th:text = "#{vehiculo.cantpuertas}" ></th>
+                    <th th:text = "#{vehiculo.cantasientos}" ></th>
+                    <th th:text = "#{vehiculo.preciorenta}" ></th>
                     <th th:text = "#{accion.editar}"> </th> 
                 </tr>
             </thead> 
