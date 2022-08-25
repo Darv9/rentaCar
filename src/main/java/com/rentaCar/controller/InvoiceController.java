@@ -31,7 +31,7 @@ public class InvoiceController {
         //JRBeanCollectionDataSource beanCollectionDataSource = new JRBeanCollectionDataSource (UserService.generateUserList());
         //JasperCompileManager.compileReport(new FileInputStream("scr/main/resources/invoice.jrxml"));
         
-        JasperReport compileReport = JasperCompileManager.compileReport(new FileInputStream("scr/main/resources/invoice.jrxml"));
+        JasperReport compileReport = JasperCompileManager.compileReport(new FileInputStream("sr/main/resources/invoice.jrxml"));
         
         HashMap<String, Object> map= new HashMap<>();
         //JasperFillManager.fillReport(compileReport, null, beanCollectionDataSource);
