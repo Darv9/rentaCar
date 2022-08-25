@@ -23,13 +23,13 @@ public class Vehiculo implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idvehiculo;
-    private char modelo;
+    private String modelo;
     private int annio;
-    private char color;
-    private char marca;
-    private char descripcionvehiculo;
-    private char material;
-    private char tipomotor;
+    private String color;
+    private String marca;
+    private String descripcionvehiculo;
+    private String material;
+    private String tipomotor;
     private int kilometraje;
     private int numpuertas;
     private int numasientos;
@@ -43,13 +43,54 @@ public class Vehiculo implements Serializable {
         this.idvehiculo = idvehiculo;
     }
 
-    public char getModelo() {
+    public String getModelo() {
         return modelo;
     }
 
-    public void setModelo(char modelo) {
+    public void setModelo(String modelo) {
         this.modelo = modelo;
     }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getDescripcionvehiculo() {
+        return descripcionvehiculo;
+    }
+
+    public void setDescripcionvehiculo(String descripcionvehiculo) {
+        this.descripcionvehiculo = descripcionvehiculo;
+    }
+
+    public String getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(String material) {
+        this.material = material;
+    }
+
+    public String getTipomotor() {
+        return tipomotor;
+    }
+
+    public void setTipomotor(String tipomotor) {
+        this.tipomotor = tipomotor;
+    }
+    
 
     public int getAnnio() {
         return annio;
@@ -59,45 +100,6 @@ public class Vehiculo implements Serializable {
         this.annio = annio;
     }
 
-    public char getColor() {
-        return color;
-    }
-
-    public void setColor(char color) {
-        this.color = color;
-    }
-
-    public char getMarca() {
-        return marca;
-    }
-
-    public void setMarca(char marca) {
-        this.marca = marca;
-    }
-
-    public char getDescripcionvehiculo() {
-        return descripcionvehiculo;
-    }
-
-    public void setDescripcionvehiculo(char descripcionvehiculo) {
-        this.descripcionvehiculo = descripcionvehiculo;
-    }
-
-    public char getMaterial() {
-        return material;
-    }
-
-    public void setMaterial(char material) {
-        this.material = material;
-    }
-
-    public char getTipomotor() {
-        return tipomotor;
-    }
-
-    public void setTipomotor(char tipomotor) {
-        this.tipomotor = tipomotor;
-    }
 
     public int getKilometraje() {
         return kilometraje;

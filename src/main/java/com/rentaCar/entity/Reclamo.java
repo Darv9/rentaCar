@@ -27,8 +27,7 @@ public class Reclamo implements Serializable {
     private long idreclamo;
     private long idcliente;
     private int idvehiculo;
-    @Temporal(javax.persistence.TemporalType.DATE)
-    private Date fechareclamo;
+    private String fechareclamo;
     private String descripcionreclamo;
 
     public long getIdreclamo() {
@@ -55,14 +54,14 @@ public class Reclamo implements Serializable {
         this.idvehiculo = idvehiculo;
     }
 
-    public Date getFechareclamo() {
+    public String getFechareclamo() {
         return fechareclamo;
     }
 
-    public void setFechareclamo(Date fechareclamo) {
+    public void setFechareclamo(String fechareclamo) {
         this.fechareclamo = fechareclamo;
     }
-
+    
     public String getDescripcionreclamo() {
         return descripcionreclamo;
     }
