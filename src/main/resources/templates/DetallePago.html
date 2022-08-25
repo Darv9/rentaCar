@@ -3,13 +3,51 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head th:replace="plantilla/template::head"></head>
+
+    <body class="body" style="background: linear-gradient(180deg, #FFFFFF, #A6A492); height: 100vh;">
+        <header th:replace="plantilla/template::header"></header>
+
+        <h1 th:text = "${titulo}"> </h1>
+        <table class = "table table-secondary table-striped table-captiontop">
+            <thead class = "thead-dark">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th th:text = "#{detallepago.idpago}"></th>
+                    <th th:text = "#{detallepago.fecha}"></th>
+                    <th th:text = "#{detallepago.fechaexp}"> </th>
+                    <th th:text = "#{detallepago.id}"> </th>
+                    <th th:text = "#{detallepago.monto}"> </th>
+                    <th th:text = "#{detallepago.numerotarjeta}"></th>
+                    <th th:text = "#{detallepago.idrenta}"></th>
+                    <th th:text = "#{accion.editar}"></th>
+                    <th th:text = "#{accion.eliminar}"> </th>
+
+                </tr>
+            </thead> 
+            <tbody>   
+            <th:block th:each="user : ${detallePago}">
+                <tr>
+                    <td th:text="${user.getIdPago}"></td>
+                    <td th:text="${user.getFecha}"></td>
+                    <td th:text="${user.getFechaexp}"></td>
+                    <td th:text="${user.getId}"></td>
+                    <td th:text="${user.getMonto}"></td>
+                    <td th:text="${user.getNumerotarjeta}"></td>
+                    <td th:text="${user.getIdrenta}"></td>
+                    <td>
+                        <a th:href="@{/editdetallePago/{idpago}(idpago=${user.getIdrenta})}">Edit</a>
+                    </td>
+                    <td>
+                        <a th:href="@{/deletePago/{idpago}(idpago=${user.getIdpago})}">Delete</a>
+                    </td>
+                </tr>
+            </th:block>
+        </tbody>
+    </table>
+    <a class="btn btn-primary" href="/detallePagoN" role="button" th:text = "#{accion.agregar}"></a>
+    <footer th:replace="plantilla/template::footer"></footer>
+</body>
 </html>
